@@ -53,7 +53,7 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 >
 > ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190115201522.png)
 >
-> ![1547554556885](C:\Users\xmz\AppData\Roaming\Typora\typora-user-images\1547554556885.png)
+> ![1547554556885](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190115201555.png)
 >
 > Highway LSTM with four layers. The curved connections represent highway connections, and the plus symbols represent transform gates that control inter-layer information ﬂow.
 >
@@ -69,18 +69,19 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 > 2. Continuation roles (C): A continuation role C-X can exist only when its base role X is realized before it.
 > 3. Reference roles (R): A reference role R-X can exist only when its base role X is realized (not necessarily before R-X).
 >
-> $A^*$ search in this setting ﬁnds the optimal sequence for all sentences and is therefore **equivalent to Viterbi decoding.**
+> $$A^*​$$ search in this setting ﬁnds the optimal sequence for all sentences and is therefore **equivalent to Viterbi decoding.**
 
 #### Analysis
 
 > performance tends to degrade, for all models, for arguments further from the predicate.
 >
+> ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190115225725.png)
+>
 > the neural model performance deteriorates less severely on long-range dependencies than traditional syntax-based models
 >
 > high-quality syntax can still make a large impact on SRL.
 >
-> off-
-> the-shelf neural methods have a remarkable ability to learn long-range dependencies, syntactic constituency structure, and global constraints without coding task-speciﬁc mechanisms for doing so
+> off-the-shelf neural methods have a remarkable ability to learn long-range dependencies, syntactic constituency structure, and global constraints without coding task-speciﬁc mechanisms for doing so
 
 
 
