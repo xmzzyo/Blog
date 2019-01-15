@@ -15,7 +15,7 @@ description:
 
 applying it to a greedy transition-based parser as well as to a globally optimized graph-based parser
 
-> Modern approaches to dependency parsing can be broadly categorized into graph-based and transition-based parsers (Kübler et al., 2009).
+> Modern approaches to dependency parsing can be broadly **categorized into graph-based and transition-based parsers** (Kübler et al., 2009).
 >
 > Graph-based parsers (McDonald, 2006) treat parsing as a search-based structured prediction problem in which the goal is learning a scoring function over dependency trees such that the correct tree is scored above all other trees. Transition-based parsers (Nivre, 2004; Nivre, 2008) treat parsing as a sequence of actions that produce a parse tree, and a classiﬁer is trained to score the possible actions at each stage of the process and guide the parsing process.
 
@@ -61,5 +61,26 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 >
 > To **alleviate the vanishing gradient problem** when training deep BiLSTMs, we use gated highway connections
 >
-> 
+> Constrained $A^*​$ Decoding：
+>
+> SRL Constraints Punyakanok et al. (2008)described a list of **SRL speciﬁc global constraints**:
+>
+> 1. Unique core roles (U): Each core role (ARG0-ARG5, ARGA) should appear at most once for each predicate.
+> 2. Continuation roles (C): A continuation role C-X can exist only when its base role X is realized before it.
+> 3. Reference roles (R): A reference role R-X can exist only when its base role X is realized (not necessarily before R-X).
+>
+> $A^*$ search in this setting ﬁnds the optimal sequence for all sentences and is therefore **equivalent to Viterbi decoding.**
+
+#### Analysis
+
+> performance tends to degrade, for all models, for arguments further from the predicate.
+>
+> the neural model performance deteriorates less severely on long-range dependencies than traditional syntax-based models
+>
+> high-quality syntax can still make a large impact on SRL.
+>
+> off-
+> the-shelf neural methods have a remarkable ability to learn long-range dependencies, syntactic constituency structure, and global constraints without coding task-speciﬁc mechanisms for doing so
+
+
 
