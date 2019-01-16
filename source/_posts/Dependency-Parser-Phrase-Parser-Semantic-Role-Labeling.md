@@ -73,7 +73,7 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 
 #### Analysis
 
-> performance tends to degrade, for all models, for arguments further from the predicate.
+> performance tends to **degrade**, for all models, for **arguments further from the predicate**.
 >
 > ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190115225725.png)
 >
@@ -83,5 +83,49 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 >
 > off-the-shelf neural methods have a remarkable ability to learn long-range dependencies, syntactic constituency structure, and global constraints without coding task-speciﬁc mechanisms for doing so
 
+### 《The Necessity of Syntactic Parsing for Semantic Role Labeling》
 
+#### Abstract
+
+> Our conclusions demonstrate that **syntactic parse information is clearly most relevant in the very ﬁrst stage – the pruning stage**. In addition, the quality of the pruning stage cannot be determined solely based on its recall and precision. Instead it depends on the characteristics of the output candidates that make downstream problems easier or harder.
+
+### 《Exploiting Mutual Beneﬁts between Syntax and Semantic Roles using Neural Network》
+
+#### Abstract
+
+> studying a parsing→SRL pipeline, a SRL→parsing pipeline, and a simple joint model by embedding sharing
+
+#### Introduction
+
+> As a shallow semantic task, semantic role labeling (SRL) models have traditionally been built upon syntactic parsing results
+>
+> Existing methods typically use semantic features to rerank n-best lists of syntactic parsing models
+>
+> First, we propose a novel **parsing→SRL pipeline using a tree Long Short Term Memory (LSTM)** model (Tai et al., 2015) **to represent parser outputs**, **before feeding them to the neural SRL model as inputs**. Second, we investigate a SRL→parsing pipeline, using semantic role label embeddings to enrich parser features. Third, we build a joint training model by embedding sharing, which is the most shallow level of parameter sharing between deep neural networks. 
+>
+> We show that the state-of-the-art LSTM semantic role labeler of Zhou and Xu (2015), which has been shown to be able to **induce syntactic features automatically**, can still be improved using parser output features via **tree LSTM** (Tai et al., 2015)
+>
+> We employ the Stack-LSTM model of Dyer et al. (2015) for dependency parsing.
+>
+> ***DEP→SRL Pipeline:***
+>
+> In this pipeline model, we apply Stack-LSTM parsing ﬁrst and feed the results **as additional features** for SRL.
+>
+> We propose a novel way of deﬁning $dep_{t^¯}$, by using hidden vector $h_{t^¯}$ of a dependency tree LSTM (Tai et al., 2015) at $w_{t^¯}$ as $dep_{t^¯}$.
+>
+> ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190116171244.png)
+>
+> ***SRL→DEP Pipeline:***
+>
+> ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190116171331.png)
+>
+>  ***Joint Model by Parameter Sharing:***
+>
+> ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190116172117.png)
+>
+> due to different neural structures, there is no sharing of other parameters. The joint model offers the simplest version of shared training (Collobert et al., 2011), but **does not employ shared decoding** (Sutton and McCallum, 2005; Zhang and Clark, 2008b). Syntax and semantic roles are assigned separately, avoiding error propagation.
+
+#### Experiments
+
+> stochastically set singletons as UNK token in each training iteration with a probability $p_{unk}$. (**OOV**)
 
