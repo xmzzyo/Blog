@@ -19,3 +19,9 @@ description:
 
 ELMo representations are deep, in the sense that they are a function of all of the internal layers of the biLM.
 
+## Attention is All you need
+
+[Transformer PyTorch 实现](http://nlp.seas.harvard.edu/2018/04/03/attention.html)
+
+[Transformer 动图讲解](https://jalammar.github.io/illustrated-transformer/)
+
