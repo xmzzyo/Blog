@@ -16,9 +16,10 @@ description:
 | Dataset       | #users | #items | avg_action/user | avg_action/item | #action |
 | ------------- | ------ | ------ | --------------- | --------------- | ------- |
 | Book          | 603668 | 367982 | 14.7            | 24.2            | 8898041 |
+| Movies_and_TV | 123960 | 50052  | 8.7             | 21.7            | 1084572 |
 | Digital_Music | 5541   | 3568   | 11.7            | 18.1            | 64706   |
 
-使用规模较小的[Digital_Music](http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Digital_Music_5.json.gz)进行训练。
+使用数据量较小的[Digital_Music](http://snap.stanford.edu/data/amazon/productGraph/categoryFiles/reviews_Digital_Music_5.json.gz)进行训练。
 
 ### 2.训练过程
 
@@ -34,7 +35,7 @@ description:
 
 **split sequence:**
 
-根据time span分割
+根据time span分割：
 
 1. 固定间隔：
 
@@ -72,23 +73,23 @@ description:
 
 训练时间为1h，电脑配置为i5低压CPU(主频1.6GHZ)，8G内存，无GPU
 
-没有GPU训练经验，，估计在当前参数(Ours)下，Book数据集在16G内存，GPU上2-3天能训练3个epoch？（Book数据集是[Amazon](http://jmcauley.ucsd.edu/data/amazon/index.html)里面最大的数据集，其他类别数据集应该能在更短时间内训练完）
+没有GPU训练经验，，估计在当前参数(Ours)下，Book数据集(Digital_Music的一百多倍大小)在16G内存，GPU上2-3天能训练3个epoch？（Book数据集是[Amazon](http://jmcauley.ucsd.edu/data/amazon/index.html)里面最大的数据集，其他类别数据集应该能在更短时间内训练完）
 
 BERT文章中使用BooksCorpus(800M words)、WikiPedia(2500M words)，一共3.3billion，batch_size为256，40个epoch，16个TPU，训练时间为4天
 
 [加速训练技巧](https://github.com/huggingface/pytorch-pretrained-BERT#Training-large-models-introduction,-tools-and-examples)  [Google Colab](https://colab.research.google.com/notebooks/tpu.ipynb) 免费TPU(需翻墙，打不开)
 
-[代码 GitHub]()
+[代码 GitHub](https://github.com/xmzzyo/BERT4RS)
 
-#### 获取token representation
+#### 获取item representation
 
 加载训练好的pytorch_model.bin，输入以“|||”分隔的序列，获取all_encoder_layers以及pooled_output
 
 all_encoder_layers[-4:]后四层hidden state concat 作为 feature（Top layers一般效果较好）
 
-<u>存在问题：随机生成序列，获取token representation，计算token的余弦相似度都是0.99（可能是训练样本太少，参数量太大？）</u>
+*存在问题：随机生成序列，获取item representation，计算item的余弦相似度都是0.99（可能是训练样本太少，参数量太大，epoch小？）*
 
-### 3.Future work
+### 3.TODO
 
 1. Position Embedding:
 
@@ -98,7 +99,7 @@ all_encoder_layers[-4:]后四层hidden state concat 作为 feature（Top layers�
 
    ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190130221850.png)
 
-   只含有位置信息，应该加入时间间隔信息([Context-aware Sequential Recommendation](https://arxiv.org/abs/1609.05787))
+   只含有位置信息，应该加入时间间隔信息 [Context-aware Sequential Recommendation](https://arxiv.org/abs/1609.05787)
 
    Position Embedding + Time Interval Embedding 
 
@@ -116,7 +117,7 @@ all_encoder_layers[-4:]后四层hidden state concat 作为 feature（Top layers�
 
    - 长期兴趣：读书
 
-4. user, item聚类
+4. item聚类
 
    NLP中的vocab数量有限(几万-几十万)，推荐系统中的item数量较大，使用BERT训练参数量太大
 
@@ -131,9 +132,9 @@ all_encoder_layers[-4:]后四层hidden state concat 作为 feature（Top layers�
    - 多样化推荐
      - 不对item进行推荐，对cluster进行推荐
 
-5. Self Attention 可视化
+5. 可解释性
 
-   可解释性 [Self-Attentive Sequential Recommendation](https://cseweb.ucsd.edu/~jmcauley/pdfs/icdm18.pdf)
+   Self Attention 可视化 [Self-Attentive Sequential Recommendation](https://cseweb.ucsd.edu/~jmcauley/pdfs/icdm18.pdf)
 
 
 
