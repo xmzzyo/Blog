@@ -10,8 +10,6 @@ categories:
 description:
 ---
 
-## Probabilistic Generative Models
-
 ## 一、Probabilistic Generative Models
 
 ### 1. LDA
@@ -23,6 +21,8 @@ description:
 引入隐藏变量---主题：
 
 $P(w_{j}|d_{i}) = \sum _{k} P(w_{j}|z_{k}) \cdot  P(z_{k}|d_{i})$
+
+共轭分布：分布的分布，先验(Dir) + 数据似然(多项式)=后验(Dir)；一方面符合直觉，另一方面可作为先验链，在Gibbs采样中有用
 
 模型结构：
 
@@ -99,6 +99,8 @@ $P(w_{j}|d_{i}) = \sum _{k} P(w_{j}|z_{k}) \cdot  P(z_{k}|d_{i})$
   > 其中$\Psi(x) = \frac{d}{d x}log\Gamma(x) = \frac{\Gamma^{'}(x)}{\Gamma(x)}$
 
   意味着在ELBO里面的期望表达式可以转化为求导来完成，这个技巧大大简化了计算量。
+  
+  然后利用EM算法求解模型参数
 
 ### 2. VAE
 
@@ -236,7 +238,7 @@ Generation网络：softmax decoder: $p(X|h)=\prod_i p(x_i|h)$
 
 类似LDA，对于$\alpha \ \theta$分别引入两个变分参数$\gamma\ \phi$，优化目标为最大化变分下界$L(\gamma,\phi)=R-D_{KL}$
 
-使用Inference网络j计算变分参数，$(\mu_b,\sum_b)=f(b)$，于是可以通过logistic normal 将其近似为Dirichlet分布，$q_{\gamma}(\theta)=\mathcal{LN}(\theta|\mu_b,diag(\sum_b)$
+使用Inference网络计算变分参数，$(\mu_b,\sum_b)=f(b)$，于是可以通过logistic normal 将其近似为Dirichlet分布，$q_{\gamma}(\theta)=\mathcal{LN}(\theta|\mu_b,diag(\sum_b)$
 
 ### 4. NVCTM
 
@@ -250,7 +252,7 @@ Generation网络：softmax decoder: $p(X|h)=\prod_i p(x_i|h)$
 
 - Householder flow
 
-  打破隐变量的独立性假设，使用迭代的可逆的先行变换将一个各向同性高斯分布映射为非各向同性
+  打破隐变量的独立性假设，使用迭代的可逆的线性变换将一个各向同性高斯分布映射为非各向同性
 
   通过正交阵可以将isotropic Gaussian 映射为full covariance，Householder flow 使用k个Householder transformation的乘积表示正交阵。
 
@@ -264,7 +266,7 @@ Generation网络：softmax decoder: $p(X|h)=\prod_i p(x_i|h)$
 
 - Centralized Transformation Flow
 
-  利用高斯分布的线性性，可以通过先行变换得到non-isotropic Gaussian样本：
+  利用高斯分布的线性性，可以通过线性变换得到non-isotropic Gaussian样本：
 
   ![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/CTF.png)
 
@@ -290,10 +292,10 @@ Generation网络：softmax decoder: $p(X|h)=\prod_i p(x_i|h)$
 
   ![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/NVCTM-tflb.png)
 
-  作者使用point-wise mutual information来衡量topic之间的相关程度，证明比LDA、NVDM、GSMd等模型更好的学习topic之间关系
+  作者使用point-wise mutual information来衡量topic之间的相关程度，证明比LDA、NVDM、GSM等模型更好的学习topic之间关系
 
   ### 总结
 
   NVI使用神经网络灵活的建模能力直接对隐变量的后验分布进行推断，通过Inference网络得到Varitional Parameters，不用像传统方法对变分参数进行严格数学推导，模型的微小改变就需要重新推导，不利于对数据的不同分布假设，并且可以避免因为数据规模增加带来Gibbs采样效率的下降。NVI使用Black-box的Inference网络带来了更加灵活的建模方式，如MLP、CNN、RNN等。
   
-  总之，定义好Inference网络结构、因变量的先验分布、ELBO目标函数即可进行隐变量学习，提供了更加一般性的方法。
+  总之，定义好Inference网络结构、隐变量的先验分布、ELBO目标函数即可进行隐变量学习，提供了更加一般性的方法。
