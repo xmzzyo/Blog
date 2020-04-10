@@ -9,8 +9,6 @@ categories:
 description:
 ---
 
-[TOC]
-
 ## Domain Adaptation 不同分类方式
 
 1. 是否有监督
