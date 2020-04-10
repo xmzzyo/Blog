@@ -26,11 +26,11 @@ $P(w_{j}|d_{i}) = \sum _{k} P(w_{j}|z_{k}) \cdot  P(z_{k}|d_{i})$
 
 模型结构：
 
-![lda-model](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/lda-model.png)
+<img src="Neural-Variational-Inference/lda-model.png" alt="lda-model" style="zoom:50%;" />
 
 生成过程：
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/lda-gen.png)
+<img src="Neural-Variational-Inference/lda-gen.png" style="zoom:50%;" />
 
 其中$\beta=(\beta_1,\beta_2\dots \beta_k)$，k是topic数，$\beta_i$是topic-word的概率分布
 
@@ -70,7 +70,7 @@ $P(w_{j}|d_{i}) = \sum _{k} P(w_{j}|z_{k}) \cdot  P(z_{k}|d_{i})$
 
   引入平均场理论后，隐藏变量的分布相对独立：
 
-  ![lda-mean-field](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/lda-mean-field.png)
+  <img src="Neural-Variational-Inference/lda-mean-field.png" alt="lda-mean-field" style="zoom:50%;" />
 
   $\begin{align} q(\beta, z, \theta|\lambda,\phi, \gamma)   =  \prod_{k=1}^Kq(\beta_k|\lambda_k)\prod_{d=1}^M(q(\theta_d|\gamma_d)\prod_{n=1}^{N_d}q(z_{dn}| \phi_{dn})) \end{align}$
 
@@ -109,7 +109,7 @@ $P(w_{j}|d_{i}) = \sum _{k} P(w_{j}|z_{k}) \cdot  P(z_{k}|d_{i})$
 > 1. https://kexue.fm/archives/5253
 > 2. https://tiffer.cn/variational-autoencoder.html
 
-![vae-model](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/vae-model.png)
+<img src="Neural-Variational-Inference/vae-model.png" alt="vae-model" style="zoom:50%;" />
 
 $\log P(X) = ELBO + KL(Q||P)$
 
@@ -125,7 +125,7 @@ $\begin{aligned}&KL\Big(N(\mu,\sigma^2)\Big\Vert N(0,1)\Big)\\  =&\int \frac{1}{
 
 整个结果分为三项积分，第一项实际上就是$-\log \sigma^2$乘以概率密度的积分（也就是1），所以结果是$-\log \sigma^2$；第二项实际是正态分布的二阶矩，正态分布的二阶矩为$\mu^2+\sigma^2$；而根据定义，第三项实际上就是“-方差除以方差=-1”。所以总结果就是$KL\Big(N(\mu,\sigma^2)\Big\Vert N(0,1)\Big)=\frac{1}{2}\Big(-\log \sigma^2+\mu^2+\sigma^2-1\Big)$，相当于对$\mu \ \sigma$加$L_2$正则
 
-![vae-model](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/vae-loss.png)
+<img src="Neural-Variational-Inference/vae-loss.png" alt="vae-model" style="zoom: 67%;" />
 
 **Reparameterization Trick:**
 
@@ -133,7 +133,7 @@ $\begin{aligned}&KL\Big(N(\mu,\sigma^2)\Big\Vert N(0,1)\Big)\\  =&\int \frac{1}{
 
 从$\mathcal{N}(\mu,\sigma^2)$中采样一个$Z$，相当于从$\mathcal{N}(0,I)$中采样一个$\varepsilon$，然后让$Z=\mu + \varepsilon \times \sigma$。
 
-![vae-model](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/vae-reparam-trick.png)
+![vae-model](Neural-Variational-Inference/vae-reparam-trick.png)
 
 ## 二、Neural Variational Inference
 
@@ -163,15 +163,15 @@ Inference网络可以使用传统方法中较少使用的MLP、CNN、RNN等
 
 得到隐变量$h$后，变分下界对模型参数$\theta$求导为：
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/NVDM-loss.png)
+<img src="Neural-Variational-Inference/NVDM-loss.png" style="zoom:67%;" />
 
 对于Inference网络参数$\phi$，经过RT后$h=\mu+\sigma$，
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/NVDM-loss2.png)
+<img src="Neural-Variational-Inference/NVDM-loss2.png" style="zoom:67%;" />
 
 #### Neural Variational Document Model
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/NVDM-model.png)
+<img src="Neural-Variational-Inference/NVDM-model.png" style="zoom:67%;" />
 
 Inference网络：MLP：$X->h, p(h|X)$，推断隐藏话题分布
 
@@ -179,7 +179,7 @@ Generation网络：softmax decoder: $p(X|h)=\prod_i p(x_i|h)$
 
 变分下界：
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/NVDM-ELBO.png)
+<img src="Neural-Variational-Inference/NVDM-ELBO.png" style="zoom:50%;" />
 
 ### 2. AVITM
 
@@ -195,7 +195,7 @@ Generation网络：softmax decoder: $p(X|h)=\prod_i p(x_i|h)$
 
   Dirichlet可以使用Laplace approximation 将其近似为 logistic normal 分布，于是Dirichlet可以近似为K(Topic 数，值较大)个独立的高斯分布，然后就可以通过RT采样出Dirichlet分布
 
-  ![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/BTM-la.png)
+  <img src="Neural-Variational-Inference/BTM-la.png" style="zoom:50%;" />
 
   于是将$p(\theta|\alpha)$近似为$\hat{p}(\mu_1|\sum_1)=\mathcal{NL}(\theta|\mu_1,\sum_1)$
 
@@ -216,11 +216,11 @@ Generation网络：softmax decoder: $p(X|h)=\prod_i p(x_i|h)$
 
 **生成过程：**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/BTM-gen.png)
+<img src="Neural-Variational-Inference/BTM-gen.png" style="zoom:50%;" />
 
 对于$b=(w_i,w_j)$
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/BTM-jp.png)
+<img src="Neural-Variational-Inference/BTM-jp.png" style="zoom:50%;" />
 
 由于BTM和LDA一样对topic和word的先验分布的参数使用Dirichlet分布，但对于Dirichlet很难使用RT对ELBO得到一个可导的 Monte Carlo estimator，Dirichlet可以使用Laplace approximation 将其近似为 logistic normal 分布
 
@@ -234,7 +234,7 @@ Generation网络：softmax decoder: $p(X|h)=\prod_i p(x_i|h)$
 
 语料的似然为：
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/GBTM-siran.png)
+<img src="Neural-Variational-Inference/GBTM-siran.png" style="zoom:50%;" />
 
 类似LDA，对于$\alpha \ \theta$分别引入两个变分参数$\gamma\ \phi$，优化目标为最大化变分下界$L(\gamma,\phi)=R-D_{KL}$
 
@@ -256,11 +256,11 @@ Generation网络：softmax decoder: $p(X|h)=\prod_i p(x_i|h)$
 
   通过正交阵可以将isotropic Gaussian 映射为full covariance，Householder flow 使用k个Householder transformation的乘积表示正交阵。
 
-  ![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/householder-matrix.png)
+  <img src="Neural-Variational-Inference/householder-matrix.png" style="zoom:67%;" />
 
   其中$h^0$是初始的isotropic Gaussian样本，$\pi$是MLP即Inference网络的输出，经过迭代得到non-isotropic Gaussian 的样本
 
-  ![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/householder-trans.png)
+  <img src="Neural-Variational-Inference/householder-trans.png" style="zoom:67%;" />
 
   约束：Householder flow只能转换单个隐变量topic vector，计算重构误差是不够的
 
@@ -268,7 +268,7 @@ Generation网络：softmax decoder: $p(X|h)=\prod_i p(x_i|h)$
 
   利用高斯分布的线性性，可以通过线性变换得到non-isotropic Gaussian样本：
 
-  ![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/CTF.png)
+  <img src="Neural-Variational-Inference/CTF.png" style="zoom:67%;" />
 
   其中$U=\prod_iH_i$，其中$H$的输入是MLP的输出和isotropic Gaussian的均值
 
@@ -276,21 +276,21 @@ Generation网络：softmax decoder: $p(X|h)=\prod_i p(x_i|h)$
 
   模型如下：
 
-  ![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/CTF-model.png)
+  <img src="Neural-Variational-Inference/CTF-model.png" style="zoom:67%;" />
 
   NVCTM (Neural Variational Correlated Topic Model) 的目标函数是：
 
-  ![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/NVCTM-obj.png)
+  <img src="Neural-Variational-Inference/NVCTM-obj.png" style="zoom:67%;" />
 
   其中重构误差通过隐变量topic分布中随机采样计算出
 
   对于KL距离，利用高斯分布的线性性：$h_0 \sim N(\mu, \sum) , \hat{h}=U \cdot h, \hat{h} \sim N(U\mu,U\sum U^T)$
 
-  ![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/NVCTM-kl.png)
+  ![](Neural-Variational-Inference/NVCTM-kl.png)
 
   于是得到 Transformation Flow Lower Bound(TFLB)：
 
-  ![](https://raw.githubusercontent.com/xmzzyo/img/master/NVI/NVCTM-tflb.png)
+  ![](Neural-Variational-Inference/NVCTM-tflb.png)
 
   作者使用point-wise mutual information来衡量topic之间的相关程度，证明比LDA、NVDM、GSM等模型更好的学习topic之间关系
 

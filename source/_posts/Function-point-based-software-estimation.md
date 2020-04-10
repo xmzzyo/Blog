@@ -16,8 +16,7 @@ description:
 >Based onthe FPA method, several methods like Feature Points, Full
 >Function Points, Function Weight, Function Bang, Mk IIFunction Points Analysis, COSMIC-FFP and NESMA evolved. 
 >
->>A. Zˇivkovicˇ, M. Hericko, T. Kralj, Empirical assessment of methods for software size estimation, Informatica (Ljubljana) 4 (2003) 425–
->>432.
+>>A. Zˇivkovicˇ, M. Hericko, T. Kralj, Empirical assessment of methods for software size estimation, Informatica (Ljubljana) 4 (2003) 425–432.
 
 
 
