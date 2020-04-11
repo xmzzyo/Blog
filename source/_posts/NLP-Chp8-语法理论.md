@@ -21,9 +21,9 @@ description:
 
 可以用复杂特征集描述词汇、规则、句子
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-14/57586295.jpg)
+<img src="NLP-Chp8-语法理论/57586295.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-14/7285907.jpg)
+<img src="NLP-Chp8-语法理论/7285907.jpg" style="zoom:50%;" />
 
 ### 2. 词汇功能语法（LFG）
 

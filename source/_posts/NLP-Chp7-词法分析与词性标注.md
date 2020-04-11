@@ -20,9 +20,9 @@ description:
 
 ### 3. 汉语自动分词概要
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-19/25160701.jpg)
+<img src="NLP-Chp7-词法分析与词性标注/25160701.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-19/47244199.jpg)
+<img src="NLP-Chp7-词法分析与词性标注/47244199.jpg" style="zoom:50%;" />
 
 **汉语自动分词中的主要问题**
 
@@ -46,9 +46,9 @@ description:
 
 3. F-测度值(F-Measure): 正确率与找回率的综合值。$F_1=\frac{2\times P \times R}{P+R}$
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-14/92352949.jpg)
+   <img src="NLP-Chp7-词法分析与词性标注/92352949.jpg" style="zoom:50%;" />
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-14/27224070.jpg)
+   <img src="NLP-Chp7-词法分析与词性标注/27224070.jpg" style="zoom:50%;" />
 
 ### 5. 自动分词基本算法
 
@@ -59,7 +59,7 @@ description:
 
 1. 正向最大匹配算法 (Forward MM, FMM)
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-14/55890904.jpg)
+   <img src="NLP-Chp7-词法分析与词性标注/55890904.jpg" style="zoom:50%;" />
 
 2. 逆向最大匹配算法 (Backward MM, BMM)
 
@@ -67,19 +67,19 @@ description:
 
 **最少分词法(最短路径法)**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-14/4582013.jpg)
+<img src="NLP-Chp7-词法分析与词性标注/4582013.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-14/38190288.jpg)
+<img src="NLP-Chp7-词法分析与词性标注/38190288.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-14/18416684.jpg)
+<img src="NLP-Chp7-词法分析与词性标注/18416684.jpg" style="zoom:50%;" />
 
 **基于语言模型的分词方法**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-14/53420317.jpg)
+<img src="NLP-Chp7-词法分析与词性标注/53420317.jpg" style="zoom:50%;" />
 
 **基于HMM的分词方法**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-14/83713994.jpg)
+<img src="NLP-Chp7-词法分析与词性标注/83713994.jpg" style="zoom:50%;" />
 
 **由字构词 (基于字标注)的分词方法**
 

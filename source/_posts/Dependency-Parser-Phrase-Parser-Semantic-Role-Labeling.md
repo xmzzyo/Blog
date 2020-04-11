@@ -25,11 +25,11 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 
 > **Stack LSTMs** (Dyer et al., 2015) are LSTMs that allow for stack operations: query, push, and pop. A “stack pointer” is maintained which determines which cell in the LSTM provides the memory and hidden units when computing the new memory cell contents. 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/20190112230510.png)
+![](Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190112230510.png)
 
 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/20190112230653.png)
+![](Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190112230653.png)
 
 ## Semantic
 
@@ -51,17 +51,17 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 
 > scoring function with penalization terms:
 >
-> ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190115201522.png)
+> ![](Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190115201522.png)
 >
-> ![1547554556885](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190115201555.png)
+> ![1547554556885](Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190115201555.png)
 >
 > Highway LSTM with four layers. The curved connections represent highway connections, and the plus symbols represent transform gates that control inter-layer information ﬂow.
 >
-> ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190115203401.png)
+> ![](Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190115203401.png)
 >
 > To **alleviate the vanishing gradient problem** when training deep BiLSTMs, we use gated highway connections
 >
-> Constrained $A^*​$ Decoding：
+> Constrained $A^*$ Decoding：
 >
 > SRL Constraints Punyakanok et al. (2008)described a list of **SRL speciﬁc global constraints**:
 >
@@ -69,13 +69,13 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 > 2. Continuation roles (C): A continuation role C-X can exist only when its base role X is realized before it.
 > 3. Reference roles (R): A reference role R-X can exist only when its base role X is realized (not necessarily before R-X).
 >
-> $$A^*​$$ search in this setting ﬁnds the optimal sequence for all sentences and is therefore **equivalent to Viterbi decoding.**
+> $$A^*$$ search in this setting ﬁnds the optimal sequence for all sentences and is therefore **equivalent to Viterbi decoding.**
 
 #### Analysis
 
 > performance tends to **degrade**, for all models, for **arguments further from the predicate**.
 >
-> ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190115225725.png)
+> ![](Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190115225725.png)
 >
 > the neural model performance deteriorates less severely on long-range dependencies than traditional syntax-based models
 >
@@ -113,15 +113,15 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 >
 > We propose a novel way of deﬁning $dep_{t^¯}$, by using hidden vector $h_{t^¯}$ of a dependency tree LSTM (Tai et al., 2015) at $w_{t^¯}$ as $dep_{t^¯}$.
 >
-> ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190116171244.png)
+> ![](Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190116171244.png)
 >
 > ***SRL→DEP Pipeline:***
 >
-> ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190116171331.png)
+> ![](Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190116171331.png)
 >
 >  ***Joint Model by Parameter Sharing:***
 >
-> ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190116172117.png)
+> ![](Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190116172117.png)
 >
 > due to different neural structures, there is no sharing of other parameters. The joint model offers the simplest version of shared training (Collobert et al., 2011), but **does not employ shared decoding** (Sutton and McCallum, 2005; Zhang and Clark, 2008b). Syntax and semantic roles are assigned separately, avoiding error propagation.
 

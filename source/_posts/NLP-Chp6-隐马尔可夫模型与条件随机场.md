@@ -11,7 +11,7 @@ description:
 
 **NLP中概率图模型的演变**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-9/20559589.jpg)
+![](NLP-Chp6-隐马尔可夫模型与条件随机场/20559589.jpg)
 
 ### 1. 马尔可夫模型
 
@@ -139,7 +139,7 @@ $\varepsilon_t(i, j)=\frac{\alpha_t\times a_{ij}b_j(O_{t+1})\times \beta_{t+1}(j
 
 $\gamma_t(i)=\sum_{j=1}^N\varepsilon_t(i,j)$
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-9/65577340.jpg)
+![](NLP-Chp6-隐马尔可夫模型与条件随机场/65577340.jpg)
 
 ### 7. HMM应用举例
 

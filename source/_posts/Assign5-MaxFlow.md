@@ -14,11 +14,11 @@ thumbnail: 5-1.png
 
 ​	假设有n个任务，m个计算机。我们构造网络如下：设置一个源点与各个任务相连，每条边的容量是1，任务与其对应的计算机节点相连，容量是1，节点汇入汇点，初始容量为$load=m$。我们对这个网络求最大流，如果$maxflow==n$，则说明这个任务分配是合法的。然后对$load$减半，求最大流判断是否存在合法任务分配，若存在则继续减半寻找更小的$maxload$，若不存在，则在$\frac{load}{2} \sim load$中找，这样通过二分寻找最小的$maxload$。
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/20190114111417.png)
+![](Assign5-MaxFlow/20190114111417.png)
 
 伪代码：
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/20190114111439.png)
+![](Assign5-MaxFlow/20190114111439.png)
 
 #### 1.2 Prove the correctness of your algorithm
 
@@ -36,11 +36,11 @@ Dinic算法时间复杂度为$(N^2M)$，N是结点数，M是边数。N=m+n+2，M
 
 ​	 求最大流，若网络中行节点i与列节点j之间有流通过，即$flow=1$，则$matrix[i][j]=1$。
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/20190114111447.png)
+![](Assign5-MaxFlow/20190114111447.png)
 
 伪代码：
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/20190114111457.png)
+![](Assign5-MaxFlow/20190114111457.png)
 
 #### 2.2 Prove the correctness of your algorithm 
 
@@ -58,7 +58,7 @@ Dinic算法时间复杂度为$(N^2M)$，N是结点数，M是边数。N=m+n+2，M
 
 伪代码：
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/20190114111507.png)
+![](Assign5-MaxFlow/20190114111507.png)
 
 #### 3.2 Prove the correctness of your algorithm
 
@@ -72,7 +72,7 @@ Dinic算法时间复杂度为$(N^2M)$，N是结点数，M是边数。N=m+n+2，M
 
 ### 4 Problem Reduction 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/20190114111521.png)
+![](Assign5-MaxFlow/20190114111521.png)
 
 从左上角到右下角，然后从右下角再到左上角的最小花费等价于从左上角到右下角走两次的最小花费。因
 此，相当于流为2的最小费用流 。
@@ -83,7 +83,7 @@ Dinic算法时间复杂度为$(N^2M)$，N是结点数，M是边数。N=m+n+2，M
 
 ### 5 Network Cost 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/20190114111534.png)
+![](Assign5-MaxFlow/20190114111534.png)
 
 capacity是n，就可以转换成n个等差序列和，每条边容量为1。
 
@@ -112,14 +112,14 @@ ans = min_cost_max_flow(s,t);
 
 ### 6 Maximum Cohesiveness 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/20190114111546.png)
+![](Assign5-MaxFlow/20190114111546.png)
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/20190114111557.png)
+![](Assign5-MaxFlow/20190114111557.png)
 
 > ***证明在  E:\研一课件\算法\《网络流作业第六题的粗劣证明》***
 
 ### 7 Maximum flow 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/20190114111607.png)
+![](Assign5-MaxFlow/20190114111607.png)
 
 对于割$Cut=\{A,B\}$ ，$u \in A,v \in B,e=(u,v)，l_e=1$ ，否则$l_e=0$ 。对偶问题是最小割问题。 

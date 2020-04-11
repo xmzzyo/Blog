@@ -23,7 +23,7 @@ description:
 
 **Solutions**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190117094814.png)
+![](Joint Models for NLP/20190117094814.png)
 
 ## Statistical Models
 
@@ -47,7 +47,7 @@ description:
 
 **Joint Segmentation and POS Tagging**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190117101631.png)
+![](Joint Models for NLP/20190117101631.png)
 
 **Joint Parsing and SRL**
 
@@ -61,7 +61,7 @@ description:
 
 > Optimize the joint objective function which is defined as a linear combination of the potentials from different predictors with a parameter λ to balance the contribution of these two components: opinion entity identification and opinion relation extraction.
 >
-> ![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190117102354.png)
+> ![](Joint Models for NLP/20190117102354.png)
 
 #### Joint Modeling (Single task)
 
@@ -79,7 +79,7 @@ description:
 
 **Transition-based Dependency Parsing**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190117103723.png)
+![](Joint Models for NLP/20190117103723.png)
 
 ***A Learning+Search Framework***
 
@@ -119,15 +119,15 @@ description:
 
 **Joint Entity and Relation Extraction** 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190117113620.png)
+![](Joint Models for NLP/20190117113620.png)
 
 **Joint Parsing and SRL**
 
 **Joint Word Segmentation, POS Tagging and Dependency Parsing**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190117140629.png)
+![](Joint Models for NLP/20190117140629.png)
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190117140757.png)
+![](Joint Models for NLP/20190117140757.png)
 
 **Joint Extraction of Entities and Relations**
 
@@ -135,13 +135,13 @@ description:
 
 ***<u>Joint Learning, Separate Search</u>***
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190117141801.png)
+![](Joint Models for NLP/20190117141801.png)
 
 #### Cross Task
 
 **Identifying beneficial task relations**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/img/20190117142724.png)
+![](Joint Models for NLP/20190117142724.png)
 
 #### Cross Domain
 

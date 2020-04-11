@@ -56,28 +56,28 @@ description:
    >
    >对位模型 A 视为隐含变量，则：$P(S|T)=\sum_AP(S,A|T)$,每一种对位序列表示成：$A=a_1a_2\dots a_m$
    >
-   >![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/80205418.jpg)
+   ><img src="NLP-Chp11-机器翻译/80205418.jpg" style="zoom:50%;" />
 
 3. 快速有效地搜索T  使得 p(T)×p(S | T) 最大。  
 
 #### **IBM 翻译模型1** 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/43330587.jpg)
+<img src="NLP-Chp11-机器翻译/43330587.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/95285187.jpg)
+<img src="NLP-Chp11-机器翻译/95285187.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/8300528.jpg)
+<img src="NLP-Chp11-机器翻译/8300528.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/72901962.jpg)
+<img src="NLP-Chp11-机器翻译/72901962.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/9595668.jpg)
+<img src="NLP-Chp11-机器翻译/9595668.jpg" style="zoom:50%;" />
 
 根据IBM翻译模型1，由英语句子e 生成法语句子f 的实现过程: 
 (1) 根据概率分布为法语句子f 选择一个长度m； 
 (2) 对于每一个j = 1, 2, …, m，根据均匀分布原则从 0, 1, …, l 中选择一个值给$a_j$； 
 (3) 对于每一个 j = 1, 2, …, m，根据概率$𝒑 (𝒇_𝒋|𝒆_{𝒂_𝒋})$ 选择一个法语单词$f_j$。
 
- ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/5630865.jpg)
+ <img src="NLP-Chp11-机器翻译/5630865.jpg" style="zoom:50%;" />
 
 #### **IBM 翻译模型2** 
 
@@ -90,14 +90,14 @@ $a(a_j|j,m,l)=P(a_j|a_i^{j-1},s_1^{j-1},m,l)$
 
 $\sum_{i=0}^la(i|j,m,l)=1$
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/23478626.jpg)
+<img src="NLP-Chp11-机器翻译/23478626.jpg" style="zoom:50%;" />
 
 根据 IBM模型2，由英语句子e 生成法语句子f 的实现过程： 
     (1)根据概率分布为法语句子f 选择一个长度m； 
     (2)对于每一个 j = 1, 2, …, m，根据概率分布 $a(a_j | j, l, m)$从0, 1, …, l中选择一个值给$a_j$； 
     (3)对于每一个 j = 1, 2, …, m，根据概率选择一个法语单词$f_j$。
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/67961581.jpg)
+<img src="NLP-Chp11-机器翻译/67961581.jpg" style="zoom:50%;" />
 
 #### **IBM 翻译模型3**
 
@@ -105,9 +105,9 @@ $\sum_{i=0}^la(i|j,m,l)=1$
 
 >定义：假设给定一个目标语言句子T，T中的每一个单词t 在源语言句子中可能有若干个词与之对应，源语言句子中所有与t 对位的单词列表我们称之为t的一个**片断(tablet)**，这个片断可能为空。一个目标语言句子T 的所有片断的集合是一个随机变量，我们称之为T的**片断集(tableau)**，记做符号R。T 的第i 个单词的片段也是一个**随机变量**，不妨记做$R_i$，那么，T 的第i个单词的片断中第k个源语言单词也是一个随机变量，记做$R_{ik}$。
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/95298483.jpg)
+<img src="NLP-Chp11-机器翻译/95298483.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/47095235.jpg)
+<img src="NLP-Chp11-机器翻译/47095235.jpg" style="zoom:50%;" />
 
 根据 IBM模型3, 一个英语句子e 翻译成法语句子f  的工作过程如下： 
 (1) 对于英语句子中的每一个单词e，选择一个产出率$\phi$，其概率为 $n(\phi|e)$； 
@@ -125,7 +125,7 @@ $\sum_{i=0}^la(i|j,m,l)=1$
 **模型 4:**  考虑片断的中心词的概率和其他单词的位置概率。 
 **模型 5:**  源语言句子单词间的相对位置。
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/79402452.jpg)
+<img src="NLP-Chp11-机器翻译/79402452.jpg" style="zoom:50%;" />
 
 ### 3. 基于短语的翻译模型 
 
@@ -139,9 +139,9 @@ $\sum_{i=0}^la(i|j,m,l)=1$
 >
 >对于一组特征，使得统计模型在这一组特征上的模型分布与样例中的经验分布完全一致，同时不对未知事件作任何假设，**即保证这个模型尽可能的“均匀”(也就是要求模型的熵值达到最大)** 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/86658006.jpg)
+<img src="NLP-Chp11-机器翻译/86658006.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/24757218.jpg)
+<img src="NLP-Chp11-机器翻译/24757218.jpg" style="zoom:50%;" />
 
 > 翻译基本单元由词转向短语 
 >
@@ -152,14 +152,14 @@ $\sum_{i=0}^la(i|j,m,l)=1$
 >
 > 在基于短语的模型中，直接将繁衍率信息、上下文信息以及局部对位调序信息记录在翻译规则中。
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/6613269.jpg)
+<img src="NLP-Chp11-机器翻译/6613269.jpg" style="zoom:50%;" />
 
 **短语划分模型** 
 
 目标：将一个词序列如何划分为短语序列 
 方法：一般假设每一种短语划分方式都是等概率的 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/69829539.jpg)
+<img src="NLP-Chp11-机器翻译/69829539.jpg" style="zoom:50%;" />
 
 **短语调序模型：**
 两种常用方法： 
@@ -167,41 +167,41 @@ $\sum_{i=0}^la(i|j,m,l)=1$
 1. 距离跳转模型 
 2. 分类模型 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/81044825.jpg)
+<img src="NLP-Chp11-机器翻译/81044825.jpg" style="zoom:50%;" />
 
 ### 4. 基于短语的翻译模型的解码算法 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/23216424.jpg)
+<img src="NLP-Chp11-机器翻译/23216424.jpg" style="zoom:50%;" />
 
 ### 5. 基于短语模型的SMT系统实现
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/31748662.jpg)
+<img src="NLP-Chp11-机器翻译/31748662.jpg" style="zoom:50%;" />
 
 ### 6. 基于层次化短语的翻译模型
 
 >基于层次化短语的翻译模型首先利用层次化短语产生句子的局部翻译，然后，像常规的基于短语的模型一样，将这些局部的翻译顺序地连接起来，从而形成整个句子的翻译。
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/69014601.jpg)
+<img src="NLP-Chp11-机器翻译/69014601.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/50970794.jpg)
+<img src="NLP-Chp11-机器翻译/50970794.jpg" style="zoom:50%;" />
 
 ### 7. 树翻译模型
 
 1. 树到串的翻译模型 
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/25576751.jpg)
+   <img src="NLP-Chp11-机器翻译/25576751.jpg" style="zoom:50%;" />
 
 2. 树到树的翻译模型 
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/51739330.jpg)
+   <img src="NLP-Chp11-机器翻译/51739330.jpg" style="zoom:50%;" />
 
 3. 串到树的翻译模型
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/9235186.jpg)
+   <img src="NLP-Chp11-机器翻译/9235186.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/42746658.jpg)
+<img src="NLP-Chp11-机器翻译/42746658.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/60110244.jpg)
+<img src="NLP-Chp11-机器翻译/60110244.jpg" style="zoom:50%;" />
 
 ### 8. 系统融合
 
@@ -232,19 +232,19 @@ $\sum_{i=0}^la(i|j,m,l)=1$
 
   ​    统计同时出现在系统译文和参考译文中的n 元词的个数，最后把匹配到的n元词的数目除以系统译文的n元词数目，得到评测结果。 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/98203597.jpg)
+<img src="NLP-Chp11-机器翻译/98203597.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/98112994.jpg)
+<img src="NLP-Chp11-机器翻译/98112994.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/30591106.jpg)
+<img src="NLP-Chp11-机器翻译/30591106.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/95118176.jpg)
+<img src="NLP-Chp11-机器翻译/95118176.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/64014268.jpg)
+<img src="NLP-Chp11-机器翻译/64014268.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/15592145.jpg)
+<img src="NLP-Chp11-机器翻译/15592145.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/40859004.jpg)
+<img src="NLP-Chp11-机器翻译/40859004.jpg" style="zoom:50%;" />
 
 (6) NIST 评测方法 National Institute of Standards and Technology 
 **基本思想：**BLEU评分公式中采用的n元语法同现概率的几何平均方法使评分值对于各种n元语法同现的比例具有相同的敏感性，但实际上，这种做法存在着潜在的矛盾，因为n值较大的统计单元出现的概率较低。因此，NIST的研究人员提出了另外一种处理方法，**就是用n-gram同现概率的算术平均值取代几何平均值。另外，如果一个n元词在参考译文中出现的次数越少，表明它所包含的信息量越大，那么，它对于该n元词就赋予更高的权重。** 
@@ -255,7 +255,7 @@ $\sum_{i=0}^la(i|j,m,l)=1$
 
 **基于计数的N-元语言模型**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/99846638.jpg)
+<img src="NLP-Chp11-机器翻译/99846638.jpg" style="zoom:50%;" />
 
 > 问题①：数据稀疏 N-元组“很 无聊”未出现过，则回退 
 >

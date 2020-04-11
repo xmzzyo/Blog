@@ -38,54 +38,54 @@ description:
 
 ### 3. 线图分析法
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/66788476.jpg)
+<img src="NLP-Chp9-句法分析/66788476.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/32594558.jpg)
+<img src="NLP-Chp9-句法分析/32594558.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/29679548.jpg)
+<img src="NLP-Chp9-句法分析/29679548.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/77759849.jpg)
+<img src="NLP-Chp9-句法分析/77759849.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/48133533.jpg)
+<img src="NLP-Chp9-句法分析/48133533.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/57488942.jpg)
+<img src="NLP-Chp9-句法分析/57488942.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/8184354.jpg)
+<img src="NLP-Chp9-句法分析/8184354.jpg" style="zoom:50%;" />
 
 **Chart算法的时间复杂度为：**
 $O(Kn^3)$ (K 为一常数, n是句子长度)
 
 ### 4. CYK分析算法
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/46208169.jpg)
+<img src="NLP-Chp9-句法分析/46208169.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/28024299.jpg)
+<img src="NLP-Chp9-句法分析/28024299.jpg" style="zoom:50%;" />
 
 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/79891438.jpg)
+<img src="NLP-Chp9-句法分析/79891438.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/14010626.jpg)
+<img src="NLP-Chp9-句法分析/14010626.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/77743394.jpg)
+<img src="NLP-Chp9-句法分析/77743394.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/43168851.jpg)
+<img src="NLP-Chp9-句法分析/43168851.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/57532977.jpg)
+<img src="NLP-Chp9-句法分析/57532977.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/26327949.jpg)
+<img src="NLP-Chp9-句法分析/26327949.jpg" style="zoom:50%;" />
 
 ### 5. 概率上下文无关文法（PCFG）
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/71881730.jpg)
+<img src="NLP-Chp9-句法分析/71881730.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-15/10801535.jpg)
+<img src="NLP-Chp9-句法分析/10801535.jpg" style="zoom:50%;" />
 
 ### 6. 依存句法分析
 
 > 在依存语法理论中，“依存”就是指词与词之间支配与被支配的关系，这种关系不是对等的，而是有方向的。
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-16/31324242.jpg)
+<img src="NLP-Chp9-句法分析/31324242.jpg" style="zoom:50%;" />
 
 **对依存图和依存树的形式约束为：**
 
@@ -133,11 +133,11 @@ $O(Kn^3)$ (K 为一常数, n是句子长度)
 
 5. 完全匹配率(complete match, CM)：所有句子中无标记依存结构完全正确的句子所占的百分比。
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-16/1559529.jpg)
+<img src="NLP-Chp9-句法分析/1559529.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-16/67633229.jpg)
+<img src="NLP-Chp9-句法分析/67633229.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/61531300.jpg)
+<img src="NLP-Chp9-句法分析/61531300.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-17/95529832.jpg)
+<img src="NLP-Chp9-句法分析/95529832.jpg" style="zoom:50%;" />
 

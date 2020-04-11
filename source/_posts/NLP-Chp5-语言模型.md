@@ -56,7 +56,7 @@ $H_p(T)=-\frac{1}{W_T}\log p(T)$
    >
    > Back-off (后备/后退)方法/Katz 后退法
    >
-   > > 当某一事件在样本中出现的频率大于阈值K (通常取 K 为0 或1)时，运用最大似然估计的减值法来估计其概率，否则，使用低阶的，即 (n-1)gram 的概率替代n-gram 概率，而这种替代需受归一化因子$\alpha​$的作用。
+   > > 当某一事件在样本中出现的频率大于阈值K (通常取 K 为0 或1)时，运用最大似然估计的减值法来估计其概率，否则，使用低阶的，即 (n-1)gram 的概率替代n-gram 概率，而这种替代需受归一化因子$\alpha$的作用。
    >
    > 绝对减值法
    >
@@ -98,9 +98,9 @@ $H_p(T)=-\frac{1}{W_T}\log p(T)$
 
 1. 分词问题
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-8/79452375.jpg)
+   <img src="NLP-Chp5-语言模型/79452375.jpg" style="zoom:50%;" />
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-8/81460265.jpg)
+   <img src="NLP-Chp5-语言模型/81460265.jpg" style="zoom:50%;" />
 
 2. 分词与词性标注一体化方法
 

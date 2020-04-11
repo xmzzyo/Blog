@@ -23,19 +23,19 @@ description:
 
 3. 信息增益（Information Gain, IG）
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/56438018.jpg)
+   <img src="NLP-Chp12-文本分类、聚类和情感分析/56438018.jpg" style="zoom:50%;" />
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/44010823.jpg) 
+   <img src="NLP-Chp12-文本分类、聚类和情感分析/44010823.jpg" style="zoom:50%;" /> 
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/22109923.jpg)
+   <img src="NLP-Chp12-文本分类、聚类和情感分析/22109923.jpg" style="zoom:50%;" />
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/7502438.jpg)
+   <img src="NLP-Chp12-文本分类、聚类和情感分析/7502438.jpg" style="zoom:50%;" />
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/71599116.jpg)
+   <img src="NLP-Chp12-文本分类、聚类和情感分析/71599116.jpg" style="zoom:50%;" />
 
 4. Chi-Square统计（Chi-Square Statistics，CHI） 
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/68104786.jpg)
+   <img src="NLP-Chp12-文本分类、聚类和情感分析/68104786.jpg" style="zoom:50%;" />
 
 #### 分类算法
 
@@ -64,9 +64,9 @@ description:
 
   决策/预测规则 
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/11128725.jpg)
+<img src="NLP-Chp12-文本分类、聚类和情感分析/11128725.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-7-18/65000254.jpg)
+<img src="NLP-Chp12-文本分类、聚类和情感分析/65000254.jpg" style="zoom:50%;" />
 
 ### 2. 文本聚类
 

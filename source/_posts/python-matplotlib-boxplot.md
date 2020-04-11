@@ -81,4 +81,4 @@ plt.savefig("prf")
 plt.show()
 ```
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-9-23/84805992.jpg)
+![](python-matplotlib-boxplot/84805992.jpg)

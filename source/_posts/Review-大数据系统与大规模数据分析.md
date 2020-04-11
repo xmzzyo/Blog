@@ -1,7 +1,7 @@
 ---
 title: Review-大数据系统与大规模数据分析
 tags: []
-thumbnail: 'https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-6/63255074.jpg'
+thumbnail: 'Review-大数据系统与大规模数据分析/63255074.jpg'
 mathjax: true
 date: 2018-06-05 15:24:59
 categories:
@@ -18,9 +18,9 @@ Database Management System(数据库管理系统)
 
 RDBMS: Relational Database Management System(关系型数据库系统)
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-6/63255074.jpg)
+![](Review-大数据系统与大规模数据分析/63255074.jpg)
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-6/65754030.jpg)
+![](Review-大数据系统与大规模数据分析/65754030.jpg)
 
 SQL Parser
 
@@ -70,9 +70,9 @@ Transaction management：事务管理
 
 RDBMS最小的存储单位是database page size，Data page size 可以设置为1~多个文件系统的 page，例如，4KB, 8KB, 16KB, …
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-6/10513525.jpg)
+![](Review-大数据系统与大规模数据分析/10513525.jpg)
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-6/49182773.jpg)
+![](Review-大数据系统与大规模数据分析/49182773.jpg)
 
 数据的顺序访问
 
@@ -94,9 +94,9 @@ Selective Data Access (有选择性的访问)
 >
 >    **无序，只支持点查询**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-6/52486626.jpg)
+![](Review-大数据系统与大规模数据分析/52486626.jpg)
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-6/91625804.jpg)
+![](Review-大数据系统与大规模数据分析/91625804.jpg)
 
 > 每个**节点是一个page**
 >
@@ -104,9 +104,9 @@ Selective Data Access (有选择性的访问)
 >
 >  **内部节点完全是索引作用**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-6/96929964.jpg)
+![](Review-大数据系统与大规模数据分析/96929964.jpg)
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-6/46453396.jpg)
+![](Review-大数据系统与大规模数据分析/46453396.jpg)
 
 **Search**
 
@@ -206,7 +206,7 @@ Buffer pool的内存空间分成page大小的单元（frame）,每个frame可以
 
 **Clock算法**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-6/23748812.jpg)
+![](Review-大数据系统与大规模数据分析/23748812.jpg)
 
 ### **运算的实现**
 

@@ -11,9 +11,9 @@ description:
 
 ## DL Basics
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/58736544.jpg)
+![](Review-Deep-Learning/58736544.jpg)
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/40136780.jpg)
+![](Review-Deep-Learning/40136780.jpg)
 
 ### Linear Algebra
 
@@ -33,7 +33,7 @@ $\mathbb{R^{m\times n}}$
 
 #### Matrix Transpose
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/18790749.jpg)
+<img src="Review-Deep-Learning/18790749.jpg" style="zoom:50%;" />
 
 $(AB)^T=B^TA^T$
 
@@ -87,13 +87,13 @@ $p(x)=\int p(x,y)dy$
 
 #### Bernoulli Distribution
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/30844542.jpg)
+<img src="Review-Deep-Learning/30844542.jpg" style="zoom:50%;" />
 
 #### Gaussian Distribution
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/15520315.jpg)
+<img src="Review-Deep-Learning/15520315.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/60061288.jpg)
+<img src="Review-Deep-Learning/60061288.jpg" style="zoom:50%;" />
 
 ## CNN
 
@@ -134,7 +134,7 @@ $N，原图大小(长或者宽)，K，kernel，S，步长$
 
 $\frac{K-1}{2}\ padding可以保留原来的size$
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/48854382.jpg)
+<img src="Review-Deep-Learning/48854382.jpg" style="zoom:50%;" />
 
 ## RNN
 
@@ -142,7 +142,7 @@ $\frac{K-1}{2}\ padding可以保留原来的size$
 
 Challenge of Long-Term Dependencies：梯度消失或爆炸
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-5/19687725.jpg)
+<img src="Review-Deep-Learning/19687725.jpg" style="zoom:50%;" />
 
 LSTM可以解决梯度消失（开忘记门），不能解决梯度爆炸
 
@@ -154,11 +154,11 @@ Instead of computing new state as a matrix product with the old state, it rather
 
 结构：
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-5/27510155.jpg)
+<img src="Review-Deep-Learning/27510155.jpg" style="zoom:50%;" />
 
 ### GRU结构
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-5/10544389.jpg)
+<img src="Review-Deep-Learning/10544389.jpg" style="zoom:50%;" />
 
 Exploding is controlled with gradient clipping. Vanishing is controlled with additive interactions (LSTM)
 
@@ -224,37 +224,37 @@ Regularization is any modification made to the learning algorithm with an intent
 
    梯度：
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-10/36643891.jpg)
+   ![](Review-Deep-Learning/36643891.jpg)
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-10/25566880.jpg)
+   ![](Review-Deep-Learning/25566880.jpg)
 
 5. Nesterov Momentum
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-10/34867821.jpg)
+   <img src="Review-Deep-Learning/34867821.jpg" style="zoom:50%;" />
 
 6. AdaGrad
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-10/60918544.jpg)
+   ![](Review-Deep-Learning/60918544.jpg)
 
 7. RMSProp
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-10/58611138.jpg)
+   ![](Review-Deep-Learning/58611138.jpg)
 
 8. Adam
 
-   ![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/59169403.jpg)
+   ![](Review-Deep-Learning/59169403.jpg)
 
 ***以上方法比较***
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-10/44066790.jpg)
+![](Review-Deep-Learning/44066790.jpg)
 
 9. Batch Normalization
 
 > Let H be a design matrix having activations in any layer for m examples in the mini-batch
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-10/80725967.jpg)
+<img src="Review-Deep-Learning/80725967.jpg" style="zoom:50%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-10/93754219.jpg)
+![](Review-Deep-Learning/93754219.jpg)
 
 ***优点***
 - Improves gradient flow through the network.
@@ -266,11 +266,11 @@ Regularization is any modification made to the learning algorithm with an intent
 
 > **Initialization should break symmetry (quiz!)**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-10/57101764.jpg)
+![](Review-Deep-Learning/57101764.jpg)
 
 ## Reinforcement Learning
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/88055126.jpg)
+<img src="Review-Deep-Learning/88055126.jpg" style="zoom:50%;" />
 
 ### Model-free learning
 
@@ -285,17 +285,17 @@ Regularization is any modification made to the learning algorithm with an intent
 - Step 2: goodness of function
 > Given an actor $𝜋_𝜃 𝑠$ with network parameter $𝜃$
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/51784666.jpg)
+![](Review-Deep-Learning/51784666.jpg)
 
 
 - Step 3: pick the best function
   Policy Gradient
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/892430.jpg)
+![](Review-Deep-Learning/892430.jpg)
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/6836615.jpg)
+![](Review-Deep-Learning/6836615.jpg)
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/27246838.jpg)
+![](Review-Deep-Learning/27246838.jpg)
 
 2. **Value-based Approach** Learning a Critic
 
@@ -305,7 +305,7 @@ Regularization is any modification made to the learning algorithm with an intent
 
 **Critic**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/72949772.jpg)
+![](Review-Deep-Learning/72949772.jpg)
 
 > Monte-Carlo based approach 
 >
@@ -313,25 +313,25 @@ Regularization is any modification made to the learning algorithm with an intent
 
 **MC VS. TD**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/52393914.jpg)
+![](Review-Deep-Learning/52393914.jpg)
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/93543592.jpg)
+![](Review-Deep-Learning/93543592.jpg)
 
 **Q-Learning**
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/9105331.jpg)
+![](Review-Deep-Learning/9105331.jpg)
 
 3. **Deep Reinforcement Learning** Actor-Critic
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/57243000.jpg)
+<img src="Review-Deep-Learning/57243000.jpg" style="zoom:50%;" />
 
 ### Model-based learning
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/16408984.jpg)
+<img src="Review-Deep-Learning/16408984.jpg" style="zoom:50%;" />
 
 **Advantages of Model-Based RL**
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/19484532.jpg)
+<img src="Review-Deep-Learning/19484532.jpg" style="zoom: 33%;" />
 
-![](https://raw.githubusercontent.com/xmzzyo/img/master/backup/18-6-11/43402611.jpg)
+<img src="Review-Deep-Learning/43402611.jpg" style="zoom: 33%;" />
 
 
