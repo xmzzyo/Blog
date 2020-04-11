@@ -25,6 +25,32 @@ description:
 
 ## 推荐系统Domain Adaptation
 
+**跨领域推荐目的：**
+
+- 解决冷启动
+- 通过减少数据稀疏性，提高准确度
+- 多样性、新奇性
+- 强化用户模型（用户新偏好）
+
+**冷启动以往解决方法：**
+
+- 领域无关特征：性别、职业
+- 辅助信息：search query、外部知识如Wikipedia
+
+**跨领域推荐方法background**
+
+- 协同过滤：
+  - user、item不overlap，没有共同信息；
+  - **解决：**
+    - 假设domains共享同分布的高斯隐向量（贝叶斯概率矩阵分解）
+    - 根据打分矩阵迁移cluster-level打分pattern
+    - 只迁移打分矩阵的latent $\Lambda$（$V\Lambda U$）
+- 基于内容：
+  - social tag共享（Flickr）
+  - DBpedia/Wikipedia来描述item
+- 基于内容和协同过滤相结合
+  - **Multi-view** *CCCFNet: A Content-Boosted Collaborative Filtering Neural Network for Cross Domain Recommender Systems*
+
 ###1. Cross-domain recommendation without shared users or items by sharing latent vector distributions
 
 > 基于**矩阵分解**
@@ -75,20 +101,6 @@ latent vector学习**两阶段：**
 > **基于内容的跨领域推荐**，解决冷启动**，可以不用user、item的overlap**
 >
 > **Domain Separation Network**, with a denoising autoencoder for item representation.
-
-冷启动以往解决方法：
-
-- 领域无关特征：性别、职业
-- 辅助信息：search query、外部知识如Wikipedia
-
-跨领域推荐方法background
-
-- 协同过滤：
-  - user、item不overlap，没有共同信息；
-  - **解决：**高斯隐向量（贝叶斯概率矩阵分解）、根据打分矩阵迁移cluster-level打分pattern
-- 基于内容：
-  - social tag共享（Flickr）
-  - DBpedia/Wikipedia来描述item
 
 **目的：**将source domain的item推荐给target domain,其中source domain和target domain无user overlap
 
