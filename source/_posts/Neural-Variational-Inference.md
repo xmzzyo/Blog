@@ -5,8 +5,8 @@ thumbnail: ''
 mathjax: true
 date: 2019-07-21 14:30:59
 categories:
-	- DL
-	- NLP
+- DL
+- NLP
 description:
 ---
 

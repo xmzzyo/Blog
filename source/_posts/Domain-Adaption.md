@@ -5,7 +5,7 @@ thumbnail: ''
 mathjax: true
 date: 2020-03-30 18:37:17
 categories:
- - DL
+- DL
 description:
 ---
 
@@ -51,7 +51,7 @@ description:
 - 基于内容和协同过滤相结合
   - **Multi-view** *CCCFNet: A Content-Boosted Collaborative Filtering Neural Network for Cross Domain Recommender Systems*
 
-###1. Cross-domain recommendation without shared users or items by sharing latent vector distributions
+### 1. Cross-domain recommendation without shared users or items by sharing latent vector distributions
 
 > 基于**矩阵分解**
 >
@@ -98,7 +98,7 @@ latent vector学习**两阶段：**
 
 ### 2. Cross-domain Recommendation via Deep Domain Adaptation
 
-> **基于内容的跨领域推荐**，解决冷启动**，可以不用user、item的overlap**
+> **基于内容的跨领域推荐**，解决冷启动，**可以不用user、item的overlap**
 >
 > **Domain Separation Network**, with a denoising autoencoder for item representation.
 
