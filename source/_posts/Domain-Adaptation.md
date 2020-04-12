@@ -3,6 +3,7 @@ title: Domain Adaptation
 tags: []
 thumbnail: ''
 mathjax: true
+toc: true
 date: 2020-03-30 18:37:17
 categories:
 - DL
