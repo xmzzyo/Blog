@@ -102,17 +102,17 @@ latent vector学习**两阶段：**
 >
 > **Domain Separation Network**, with a denoising autoencoder for item representation.
 
-**目的：**将source domain的item推荐给target domain,其中source domain和target domain无user overlap
+**目的：** 将source domain的item推荐给target domain,其中source domain和target domain无user overlap
 
-**任务：**通过video文本描述推荐新闻
+**任务：** 通过video文本描述推荐新闻
 
-**方法：**使用domain separation network
+**方法：** 使用domain separation network
 
 <img src="Domain-Adaption/image-20200409114743237.png" alt="image-20200409114743237" style="zoom: 67%;" />
 
 **损失函数：**![image-20200409114904853](Domain-Adaption/image-20200409114904853.png)
 
-**DSN 损失：**分类误差＋stack降噪自编码器重构误差＋共享/私有正交约束＋共享encoder的对抗损失(Gradient Reversal Layer)
+**DSN 损失：** 分类误差＋stack降噪自编码器重构误差＋共享/私有正交约束＋共享encoder的对抗损失(Gradient Reversal Layer)
 
 <img src="Domain-Adaption/image-20200409121518939.png" alt="image-20200409121518939" style="zoom:67%;" />
 

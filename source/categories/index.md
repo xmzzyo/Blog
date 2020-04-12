@@ -10,5 +10,4 @@ categories:
 	- Deep Learning
 	- Algorithm
 	- Linux
-	- 易经
 	- 杂项
