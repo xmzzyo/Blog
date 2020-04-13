@@ -32,7 +32,7 @@ description:
     - 根据打分矩阵迁移cluster-level打分pattern
     - 只迁移打分矩阵的latent $\Lambda$（$V\Lambda U$）
 - 基于内容：
-  - social tag共享（Flickr）
+  - social tag共享（Flickr），review-based
   - DBpedia/Wikipedia来描述item
 - 基于内容和协同过滤相结合
   - **Multi-view** *CCCFNet: A Content-Boosted Collaborative Filtering Neural Network for Cross Domain Recommender Systems*
@@ -43,7 +43,7 @@ description:
 > - 多元高斯分布拟合，迁移$\mu$和$\Lambda$
 > - 共享私有disentanglement，然后迁移共享
 
-### 1. Cross-domain recommendation without shared users or items by sharing latent vector distributions
+### Cross-domain recommendation without shared users or items by sharing latent vector distributions
 
 > 基于**矩阵分解**
 >
@@ -88,7 +88,7 @@ latent vector学习**两阶段：**
 
 **改进：**本文所提出的方法假设所有的domain共享一个latent vector的分布。然而，一些latent vector仅用于某一domain，领域之间的关系有所不同。通过**引入domain-speciﬁc latent vector和shared latent vector**，**可建模domain heterogeneity**。
 
-### 2. Cross-domain Recommendation via Deep Domain Adaptation
+### Cross-domain Recommendation via Deep Domain Adaptation
 
 > **基于内容的跨领域推荐**，解决冷启动，**可以不用user、item的overlap**
 >
@@ -111,3 +111,93 @@ latent vector学习**两阶段：**
 损失函数：![image-20200409121334123](Cross-domain-Recommendation/image-20200409121334123.png)
 
 DSN损失＋item embedding差别＋降噪自编码器重构误差
+
+## Connecting Social Media to E-Commerce: Cold-Start Product Recommendation Using Microblogging Information
+> 需要user的overlap
+>
+> **目的**： 解决冷启动
+
+<img src="Cross-domain-Recommendation/image-20200413143713415.png" alt="image-20200413143713415" style="zoom:67%;" />
+
+**流程：**
+
+1. 微博feature（Demographic，Text，Network，Temporal）
+2. 京东word2vec学习item vector，para2vec学习user vector
+3. 在**linked user**中使用MART（Multiple Additive Regression Tree）作为回归问题学习两个user vector的映射
+
+**Trick：**
+
+1. 由于**linked user**数据量限制，将所有user vector平均$v^{sup}$，然后约束拟合到的user vector不能和平均vector差太多
+2. 约束特征向量维度之间的相关性
+
+**目标函数为：**
+
+<img src="Cross-domain-Recommendation/image-20200413145306248.png" alt="image-20200413145306248" style="zoom: 67%;" />
+
+## Cross-Domain Recommendation: An Embedding and Mapping Approach
+
+> MLP非线性映射（非线性好，但需要数据多）
+>
+> **选择性映射**（不是所有user/item适合映射，不active/popular的对映射有害）
+>
+> 需要overlap
+
+<img src="Cross-domain-Recommendation/image-20200413153547226.png" alt="image-20200413153547226" style="zoom:50%;" />
+
+两种隐向量模型：**
+
+1. MF：
+
+   隐向量正态分布：<img src="Cross-domain-Recommendation/image-20200413152223999.png" alt="image-20200413152223999" style="zoom: 67%;" />
+
+   目标函数：<img src="Cross-domain-Recommendation/image-20200413152306519.png" alt="image-20200413152306519" style="zoom:67%;" />
+
+2. RBF（pair-wise的preference ranking模型）：
+
+   相对偏好：<img src="Cross-domain-Recommendation/image-20200413152643491.png" alt="image-20200413152643491" style="zoom:67%;" />
+
+   目标函数：<img src="Cross-domain-Recommendation/image-20200413152711190.png" alt="image-20200413152711190" style="zoom: 67%;" />
+
+**两种映射模型：**
+
+1. 线性
+2. MLP非线性
+
+**采样：**
+
+学习映射模型时，采用**top-p percent of popular** entities 作为training set
+
+## Cross-Domain Recommendation for Cold-Start Users via Neighborhood Based Feature Mapping
+
+> 使用了三种相似度方法计算用户相似性
+>
+> 基于相似user邻居的GBT学习Mapping
+>
+> 需要user overlap
+
+<img src="Cross-domain-Recommendation/image-20200413154008830.png" alt="image-20200413154008830" style="zoom:50%;" />
+
+**基于用户相似度的矩阵分解：**
+
+**动机：**
+
+1. 不同user在不同domain 打分行为不同，分别在不同domain分解获得domain-specific latent feature
+2. domain少了，稀疏了，所以加上用户相似度更好的进行分解
+
+**三种相似度：**
+
+1. Similarity Based on Common Ratings
+2. Similarity Based on the Estimations of Having No Interest（用户不给打分代表不喜欢，概率事件，考虑item的popularity and reputation、user的打分行为）
+3. Similarity Based on Rating Biases
+
+**目标函数：**
+
+<img src="Cross-domain-Recommendation/image-20200413161710453.png" alt="image-20200413161710453" style="zoom:67%;" />
+
+**基于邻居的latent mapping：**
+
+由于分domain进行分解，需要在不同domain的latent space进行mapping
+
+使用linked user基于GBT学习mapping
+
+根据与cold-start user相似的用户在target domain的vectors获取cold-start user的vector
