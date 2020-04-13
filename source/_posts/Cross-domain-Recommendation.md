@@ -6,6 +6,7 @@ mathjax: true
 toc: true
 date: 2020-04-12 18:15:12
 categories:
+password: 180055
 description:
 ---
 
@@ -112,7 +113,8 @@ latent vector学习**两阶段：**
 
 DSN损失＋item embedding差别＋降噪自编码器重构误差
 
-## Connecting Social Media to E-Commerce: Cold-Start Product Recommendation Using Microblogging Information
+### Connecting Social Media to E-Commerce: Cold-Start Product Recommendation Using Microblogging Information
+
 > 需要user的overlap
 >
 > **目的**： 解决冷启动
@@ -134,7 +136,7 @@ DSN损失＋item embedding差别＋降噪自编码器重构误差
 
 <img src="Cross-domain-Recommendation/image-20200413145306248.png" alt="image-20200413145306248" style="zoom: 67%;" />
 
-## Cross-Domain Recommendation: An Embedding and Mapping Approach
+### Cross-Domain Recommendation: An Embedding and Mapping Approach
 
 > MLP非线性映射（非线性好，但需要数据多）
 >
@@ -167,7 +169,7 @@ DSN损失＋item embedding差别＋降噪自编码器重构误差
 
 学习映射模型时，采用**top-p percent of popular** entities 作为training set
 
-## Cross-Domain Recommendation for Cold-Start Users via Neighborhood Based Feature Mapping
+### Cross-Domain Recommendation for Cold-Start Users via Neighborhood Based Feature Mapping
 
 > 使用了三种相似度方法计算用户相似性
 >
