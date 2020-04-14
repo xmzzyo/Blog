@@ -203,3 +203,35 @@ DSN损失＋item embedding差别＋降噪自编码器重构误差
 使用linked user基于GBT学习mapping
 
 根据与cold-start user相似的用户在target domain的vectors获取cold-start user的vector
+
+### Cross-Domain Recommendation via Clustering on Multi-Layer Graphs
+
+> 多site，adults是用超过3个的社交网络
+>
+> group knowledge，通过社区检测(cross-source user community detection approach)获得，考虑inter-source relationships 。可以减少推荐的搜索空间，提供更好的候选
+>
+> individual knowledge，个人历史记录
+
+**用户社区检测：**
+
+最小割方法-NP hard问题
+
+使用谱聚类，GNN，Grassman Manifolds衡量距离，<img src="Cross-domain-Recommendation/image-20200414225744223.png" alt="image-20200414225744223" style="zoom: 67%;" />
+
+**考虑层间关系（相似度）：**
+
+- 动机：
+  - 数据模态不同，描述用户方式不同
+  - 有些数据源或者模态更有信息（Foursquare和Twitter在不同方面有优势）
+- 通过inter-layer similarity graph $R$ 和 the adjacency matrix $W_R$得到
+
+<img src="Cross-domain-Recommendation/image-20200414230836966.png" alt="image-20200414230836966" style="zoom:67%;" />
+
+
+
+
+
+
+
+
+
