@@ -206,11 +206,11 @@ DSN损失＋item embedding差别＋降噪自编码器重构误差
 
 ### Cross-Domain Recommendation via Clustering on Multi-Layer Graphs
 
-> 多site，adults是用超过3个的社交网络
+> 多site，adults使用超过3个的社交网络
 >
-> group knowledge，通过社区检测(cross-source user community detection approach)获得，考虑inter-source relationships 。可以减少推荐的搜索空间，提供更好的候选
+> **group knowledge**，通过社区检测(cross-source user community detection approach)获得，考虑inter-source relationships 。可以减少推荐的搜索空间，提供更好的候选
 >
-> individual knowledge，个人历史记录
+> **individual knowledge**，个人历史记录，个人偏好
 
 **用户社区检测：**
 
