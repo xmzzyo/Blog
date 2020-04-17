@@ -52,7 +52,7 @@ $2^{H(l,q)}$
 
 $I(x,y)=H(x)-H(x|y)=\log \frac{p(x,y)}{p(x)p(y)}$
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp2-数学基础/20190114112537.png" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp2-数学基础/20190114112537.png" style="zoom:50%;" />
 
 > 互信息 I (X; Y) 是在知道了 Y 的值以后 X 的不确定性的减少量，即Y 的值透露了多少关于 X 的信息量。
 >

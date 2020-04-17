@@ -23,7 +23,7 @@ description:
 
 ### 3 配置桥接网卡
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/VirtualBox-Ubuntu1604-Server-静态ip配置/50708098.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/VirtualBox-Ubuntu1604-Server-静态ip配置/50708098.jpg)
 
 网络连接方式：
 
@@ -46,7 +46,7 @@ address 192.168.1.11
 netmask 255.255.255.0
 ```
 ip地址要和本机在同一网段：
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/VirtualBox-Ubuntu1604-Server-静态ip配置/66215780.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/VirtualBox-Ubuntu1604-Server-静态ip配置/66215780.jpg)
 
 ```shell
 xmz@userver:~$ ifconfig
