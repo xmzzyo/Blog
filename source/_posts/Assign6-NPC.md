@@ -20,7 +20,7 @@ thumbnail: 6-2.jpg
 对于给定的图$G$、地雷位置，我们对于标注$m$的结点，判断其相连结点是否有$m$个地雷，这一过程在多项式时间内可以完成，因此它是NP问题。
 构造结点C，置label为3，对于每个变量$x_i$，设置两个项$x_i,\neg x_i$，连接C与对应的项，比如对于$\neg x_1 \vee x_2 \vee x_3$，连接$C和x_1,x_2,\neg x_3$，并且连接C和两个额外的结点$s\ s'$作为“补充”。
 具体图如下：
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign6-NPC/20190114111714.png)
+![](Assign6-NPC/20190114111714.png)
 对于一个assignment，如果$x_i=True$，则将对应结点置1，否则置0，若$C_i$中的项为TRUE的小于3个，可以把$s_i\ s_i'$中的一个或两个置1作为“添头”。
 若子句中至少有一个为TRUE，则子句成立，结点周围也可以连接3个地雷。
  $3-SAT \leq_P MineSweeper$，其是NPC问题。

@@ -65,4 +65,4 @@ Anderson的指针分析算法是一种基于约束的方法，根据程序中语
 
 #### 3.算法
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/程序分析-SOOT-指针分析/53705431.jpg" style="zoom:67%;" />
+<img src="程序分析-SOOT-指针分析/53705431.jpg" style="zoom:67%;" />

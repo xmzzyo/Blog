@@ -57,11 +57,11 @@ latent vector学习**两阶段：**
 - 每个领域的latent vector
 - latent vector对齐
 
-**user vector** $u_{dn}$，**item vector** $v_{dm}$，**打分**<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200409161847024.png" alt="image-20200409161847024" style="zoom:67%;" />
+**user vector** $u_{dn}$，**item vector** $v_{dm}$，**打分**<img src="Cross-domain-Recommendation/image-20200409161847024.png" alt="image-20200409161847024" style="zoom:67%;" />
 
 **对齐**user vector和item vector：
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200409161545479.png" alt="image-20200409161545479" style="zoom:67%;" />                <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200409161600602.png" alt="image-20200409161600602" style="zoom:67%;" />  
+<img src="Cross-domain-Recommendation/image-20200409161545479.png" alt="image-20200409161545479" style="zoom:67%;" />                <img src="Cross-domain-Recommendation/image-20200409161600602.png" alt="image-20200409161600602" style="zoom:67%;" />  
 
 > **Gaussian-Wishart先验分布**
 >
@@ -71,13 +71,13 @@ latent vector学习**两阶段：**
 >
 > > 多元高斯分布均值分布的共轭是高斯分布，精度（方差的逆）分布的共轭为Gamma分布
 >
-> <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200409210417405.png" alt="image-20200409210417405" style="zoom:50%;" />
+> <img src="Cross-domain-Recommendation/image-20200409210417405.png" alt="image-20200409210417405" style="zoom:50%;" />
 >
-> <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200409210454834.png" alt="image-20200409210454834" style="zoom:50%;" />
+> <img src="Cross-domain-Recommendation/image-20200409210454834.png" alt="image-20200409210454834" style="zoom:50%;" />
 
 **训练过程：**
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200409210020132.png" alt="image-20200409210020132" style="zoom:67%;" />
+<img src="Cross-domain-Recommendation/image-20200409210020132.png" alt="image-20200409210020132" style="zoom:67%;" />
 
 **推断过程：**
 
@@ -85,7 +85,7 @@ latent vector学习**两阶段：**
 
 1. 从Gaussian-Wishart后验分布中采样user/item vectors的均值$\mu$、协方差$\Lambda$
 2. 从以$\mu\quad \Lambda$的高斯分布中采样user/item vector
-3. 估计打分值<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200410104429093.png" alt="image-20200410104429093" style="zoom:50%;" />
+3. 估计打分值<img src="Cross-domain-Recommendation/image-20200410104429093.png" alt="image-20200410104429093" style="zoom:50%;" />
 
 **改进：**本文所提出的方法假设所有的domain共享一个latent vector的分布。然而，一些latent vector仅用于某一domain，领域之间的关系有所不同。通过**引入domain-speciﬁc latent vector和shared latent vector**，**可建模domain heterogeneity**。
 
@@ -101,13 +101,13 @@ latent vector学习**两阶段：**
 
 **方法：** 使用domain separation network
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200409114743237.png" alt="image-20200409114743237" style="zoom: 67%;" />
+<img src="Cross-domain-Recommendation/image-20200409114743237.png" alt="image-20200409114743237" style="zoom: 67%;" />
 
 **损失函数：**![image-20200409114904853](Cross-domain-Recommendation/image-20200409114904853.png)
 
 **DSN 损失：** 分类误差＋stack降噪自编码器重构误差＋共享/私有正交约束＋共享encoder的对抗损失(Gradient Reversal Layer)
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200409121518939.png" alt="image-20200409121518939" style="zoom:67%;" />
+<img src="Cross-domain-Recommendation/image-20200409121518939.png" alt="image-20200409121518939" style="zoom:67%;" />
 
 损失函数：![image-20200409121334123](Cross-domain-Recommendation/image-20200409121334123.png)
 
@@ -119,7 +119,7 @@ DSN损失＋item embedding差别＋降噪自编码器重构误差
 >
 > **目的**： 解决冷启动
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200413143713415.png" alt="image-20200413143713415" style="zoom:67%;" />
+<img src="Cross-domain-Recommendation/image-20200413143713415.png" alt="image-20200413143713415" style="zoom:67%;" />
 
 **流程：**
 
@@ -134,7 +134,7 @@ DSN损失＋item embedding差别＋降噪自编码器重构误差
 
 **目标函数为：**
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200413145306248.png" alt="image-20200413145306248" style="zoom: 67%;" />
+<img src="Cross-domain-Recommendation/image-20200413145306248.png" alt="image-20200413145306248" style="zoom: 67%;" />
 
 ### Cross-Domain Recommendation: An Embedding and Mapping Approach
 
@@ -144,21 +144,21 @@ DSN损失＋item embedding差别＋降噪自编码器重构误差
 >
 > 需要overlap
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200413153547226.png" alt="image-20200413153547226" style="zoom:50%;" />
+<img src="Cross-domain-Recommendation/image-20200413153547226.png" alt="image-20200413153547226" style="zoom:50%;" />
 
 两种隐向量模型：**
 
 1. MF：
 
-   隐向量正态分布：<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200413152223999.png" alt="image-20200413152223999" style="zoom: 67%;" />
+   隐向量正态分布：<img src="Cross-domain-Recommendation/image-20200413152223999.png" alt="image-20200413152223999" style="zoom: 67%;" />
 
-   目标函数：<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200413152306519.png" alt="image-20200413152306519" style="zoom:67%;" />
+   目标函数：<img src="Cross-domain-Recommendation/image-20200413152306519.png" alt="image-20200413152306519" style="zoom:67%;" />
 
 2. RBF（pair-wise的preference ranking模型）：
 
-   相对偏好：<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200413152643491.png" alt="image-20200413152643491" style="zoom:67%;" />
+   相对偏好：<img src="Cross-domain-Recommendation/image-20200413152643491.png" alt="image-20200413152643491" style="zoom:67%;" />
 
-   目标函数：<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200413152711190.png" alt="image-20200413152711190" style="zoom: 67%;" />
+   目标函数：<img src="Cross-domain-Recommendation/image-20200413152711190.png" alt="image-20200413152711190" style="zoom: 67%;" />
 
 **两种映射模型：**
 
@@ -177,7 +177,7 @@ DSN损失＋item embedding差别＋降噪自编码器重构误差
 >
 > 需要user overlap
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200413154008830.png" alt="image-20200413154008830" style="zoom:50%;" />
+<img src="Cross-domain-Recommendation/image-20200413154008830.png" alt="image-20200413154008830" style="zoom:50%;" />
 
 **基于用户相似度的矩阵分解：**
 
@@ -194,7 +194,7 @@ DSN损失＋item embedding差别＋降噪自编码器重构误差
 
 **目标函数：**
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200413161710453.png" alt="image-20200413161710453" style="zoom:67%;" />
+<img src="Cross-domain-Recommendation/image-20200413161710453.png" alt="image-20200413161710453" style="zoom:67%;" />
 
 **基于邻居的latent mapping：**
 
@@ -216,7 +216,7 @@ DSN损失＋item embedding差别＋降噪自编码器重构误差
 
 最小割方法-NP hard问题
 
-使用谱聚类，GNN，Grassman Manifolds衡量距离，<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200414225744223.png" alt="image-20200414225744223" style="zoom: 67%;" />
+使用谱聚类，GNN，Grassman Manifolds衡量距离，<img src="Cross-domain-Recommendation/image-20200414225744223.png" alt="image-20200414225744223" style="zoom: 67%;" />
 
 **考虑层间关系（相似度）：**
 
@@ -225,7 +225,7 @@ DSN损失＋item embedding差别＋降噪自编码器重构误差
   - 有些数据源或者模态更有信息（Foursquare和Twitter在不同方面有优势）
 - 通过inter-layer similarity graph $R$ 和 the adjacency matrix $W_R$得到
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Cross-domain-Recommendation/image-20200414230836966.png" alt="image-20200414230836966" style="zoom:67%;" />
+<img src="Cross-domain-Recommendation/image-20200414230836966.png" alt="image-20200414230836966" style="zoom:67%;" />
 
 
 
