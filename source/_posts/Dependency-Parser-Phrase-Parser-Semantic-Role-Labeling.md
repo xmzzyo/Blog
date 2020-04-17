@@ -25,11 +25,11 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 
 > **Stack LSTMs** (Dyer et al., 2015) are LSTMs that allow for stack operations: query, push, and pop. A “stack pointer” is maintained which determines which cell in the LSTM provides the memory and hidden units when computing the new memory cell contents. 
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190112230510.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190112230510.png)
 
 
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190112230653.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190112230653.png)
 
 ## Semantic
 
@@ -51,13 +51,13 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 
 > scoring function with penalization terms:
 >
-> ![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190115201522.png)
+> ![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190115201522.png)
 >
 > ![1547554556885](Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190115201555.png)
 >
 > Highway LSTM with four layers. The curved connections represent highway connections, and the plus symbols represent transform gates that control inter-layer information ﬂow.
 >
-> ![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190115203401.png)
+> ![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190115203401.png)
 >
 > To **alleviate the vanishing gradient problem** when training deep BiLSTMs, we use gated highway connections
 >
@@ -75,7 +75,7 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 
 > performance tends to **degrade**, for all models, for **arguments further from the predicate**.
 >
-> ![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190115225725.png)
+> ![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190115225725.png)
 >
 > the neural model performance deteriorates less severely on long-range dependencies than traditional syntax-based models
 >
@@ -113,15 +113,15 @@ applying it to a greedy transition-based parser as well as to a globally optimiz
 >
 > We propose a novel way of deﬁning $dep_{t^¯}$, by using hidden vector $h_{t^¯}$ of a dependency tree LSTM (Tai et al., 2015) at $w_{t^¯}$ as $dep_{t^¯}$.
 >
-> ![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190116171244.png)
+> ![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190116171244.png)
 >
 > ***SRL→DEP Pipeline:***
 >
-> ![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190116171331.png)
+> ![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190116171331.png)
 >
 >  ***Joint Model by Parameter Sharing:***
 >
-> ![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190116172117.png)
+> ![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Dependency-Parser-Phrase-Parser-Semantic-Role-Labeling/20190116172117.png)
 >
 > due to different neural structures, there is no sharing of other parameters. The joint model offers the simplest version of shared training (Collobert et al., 2011), but **does not employ shared decoding** (Sutton and McCallum, 2005; Zhang and Clark, 2008b). Syntax and semantic roles are assigned separately, avoiding error propagation.
 

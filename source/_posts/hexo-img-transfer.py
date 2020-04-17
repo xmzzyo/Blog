@@ -51,8 +51,9 @@ def copy_img(md_name, imgs):
 
 
 def rw_md(fn, content):
-    with open(fn, "w", encoding='utf8') as f:
-        f.writelines(content)
+	print(f"write to {fn}")
+	with open(fn, "w", encoding='utf8') as f:
+		f.writelines(content)
 
 
 
@@ -80,7 +81,7 @@ def convert_jsdeliver_url():
 	        			l = l.replace(url, f"{js_deliver}{url}")
 	        			# print(f"{js_deliver}{url}")
 	        		lines[i] = l
-	    rw_md(md_n + ".md", lines)
+	    rw_md(folder + md_n + ".md", lines)
 
 if __name__ == "__main__":
 	convert_jsdeliver_url()

@@ -11,15 +11,15 @@ abstract: This blog is encrypted.
 message: You must enter the password to read.
 ---
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190113151538.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190113151538.png)
 
 
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190114110221.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190114110221.png)
 
 ### 1 Divide and Conquer 
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190114110304.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190114110304.png)
 
 每次将数组二分，取A，B数组的中位数比较，若$A[m_A]<B[m_B]$则$0-m_A$必属于两数组排序后的前n个数中，我们反证，若$A[m_A]<B[m_B]$,A中$0-m_A$不完全属于前n个数，则第n个数小于$A[m_A]$，又因为$A[m_A]<B[m_B]$，则B中比$A[m_A]$小的数小于$\frac{n}{2}$，则A，B中小于$A[m_A]$的个数必小于$n$，因此假设不成立。每次递归过程会使问题规模减小$\frac{1}{2}$，直到$A[m_A]=B[m_B]$，或者问题规模减少到1，因此，经过有限次递归，可以得到问题解。
 
@@ -27,7 +27,7 @@ message: You must enter the password to read.
 
 ### 2 Divide and Conquer 
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190114110329.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190114110329.png)
 
 随机选取pivot，将比pivot小的数移动至pivot左边，比pivot大的数移动到pivot右边，比较$|S_+|$与k-1的大小，若小于k-1，则说明$k^{th}$ largest数在$S_-$中，若大于k-1，则说明$k^{th}$\ largest数在$S_+$中，若等于，则$k^{th}$\ largest是pivot。
 
@@ -35,7 +35,7 @@ $T(n)\ =\ T(\frac{n}{2})+C$，总时间复杂度与QuickSelect一样为$O(n)$。
 
 ### 3 Divide and Conquer 
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190114110352.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190114110352.png)
 
 对于完全二叉树T，总存在全局最小值，也即存在局部最小值，local minimum一定存在。对于lable of node v，若其小于左右child，则其为local minimum，若lable of node v只大于左（右）child，就递归左（右）子树，而右（左）child大于父节点，因此其不用递归。
 
@@ -43,7 +43,7 @@ $T(n)\ =\ T(\frac{n}{2})+C$，总时间复杂度与QuickSelect一样为$O(n)$。
 
 ### 4 Divide and Conquer 
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190114110415.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190114110415.png)
 
 不断四分，最后到3*3的格子，localmin要么是边界最小值，要么是中心点，必有localmin。
 
@@ -51,7 +51,7 @@ $T(n)\ =\ T(\frac{n}{2})+C$，总时间复杂度与QuickSelect一样为$O(n)$。
 
 ### 5 Divide and Conquer 
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190114110428.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign1-DivideAndConquer/20190114110428.png)
 
 选取多边形一条随机边$v_1,v_2$，以及点$p_n$，可以构成一个三角形和两个多变形，其中一个多边形边数为i，另个一个是v-i+1，且$p_n$在满足两个多变形至少为三角形的前提下，可以任取。因此i的取值为2到n-1，解为卡特兰数，满足$f(n)=f(2)\times f(n-1)+f(3)\times f(n-2)+f(4)\times f(n-3)+\cdots+f(n-1)\times f(2)$。
 

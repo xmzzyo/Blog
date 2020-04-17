@@ -18,9 +18,9 @@ Database Management System(数据库管理系统)
 
 RDBMS: Relational Database Management System(关系型数据库系统)
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/63255074.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/63255074.jpg)
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/65754030.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/65754030.jpg)
 
 SQL Parser
 
@@ -70,9 +70,9 @@ Transaction management：事务管理
 
 RDBMS最小的存储单位是database page size，Data page size 可以设置为1~多个文件系统的 page，例如，4KB, 8KB, 16KB, …
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/10513525.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/10513525.jpg)
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/49182773.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/49182773.jpg)
 
 数据的顺序访问
 
@@ -94,9 +94,9 @@ Selective Data Access (有选择性的访问)
 >
 >    **无序，只支持点查询**
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/52486626.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/52486626.jpg)
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/91625804.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/91625804.jpg)
 
 > 每个**节点是一个page**
 >
@@ -104,9 +104,9 @@ Selective Data Access (有选择性的访问)
 >
 >  **内部节点完全是索引作用**
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/96929964.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/96929964.jpg)
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/46453396.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/46453396.jpg)
 
 **Search**
 
@@ -206,7 +206,7 @@ Buffer pool的内存空间分成page大小的单元（frame）,每个frame可以
 
 **Clock算法**
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/23748812.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Review-大数据系统与大规模数据分析/23748812.jpg)
 
 ### **运算的实现**
 

@@ -23,19 +23,19 @@ description:
 
 3. 信息增益（Information Gain, IG）
 
-   <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/56438018.jpg" style="zoom:50%;" />
+   <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/56438018.jpg" style="zoom:50%;" />
 
-   <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/44010823.jpg" style="zoom:50%;" /> 
+   <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/44010823.jpg" style="zoom:50%;" /> 
 
-   <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/22109923.jpg" style="zoom:50%;" />
+   <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/22109923.jpg" style="zoom:50%;" />
 
-   <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/7502438.jpg" style="zoom:50%;" />
+   <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/7502438.jpg" style="zoom:50%;" />
 
-   <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/71599116.jpg" style="zoom:50%;" />
+   <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/71599116.jpg" style="zoom:50%;" />
 
 4. Chi-Square统计（Chi-Square Statistics，CHI） 
 
-   <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/68104786.jpg" style="zoom:50%;" />
+   <img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/68104786.jpg" style="zoom:50%;" />
 
 #### 分类算法
 
@@ -64,9 +64,9 @@ description:
 
   决策/预测规则 
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/11128725.jpg" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/11128725.jpg" style="zoom:50%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/65000254.jpg" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/NLP-Chp12-文本分类、聚类和情感分析/65000254.jpg" style="zoom:50%;" />
 
 ### 2. 文本聚类
 

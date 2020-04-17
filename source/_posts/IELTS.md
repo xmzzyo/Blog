@@ -17,13 +17,13 @@ description:
 
 more than three words，12、twelve
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/95245029.jpg" style="zoom:33%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/95245029.jpg" style="zoom:33%;" />
 
 ### 发音
 
 **连读**
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/53464601.jpg" style="zoom:33%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/53464601.jpg" style="zoom:33%;" />
 
 an apple	an hour
 
@@ -39,11 +39,11 @@ black coffee	office staff	good day(前后相连，一样的读一个)
 
 **吞音**
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/86461317.jpg" style="zoom:33%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/86461317.jpg" style="zoom:33%;" />
 
 ### 地图题
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/57491362.jpg" style="zoom:33%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/57491362.jpg" style="zoom:33%;" />
 
 标明：top	bottom	left	right
 
@@ -51,21 +51,21 @@ black coffee	office staff	good day(前后相连，一样的读一个)
 
 单词（同类词）、句子改写
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/31026232.jpg" style="zoom:33%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/31026232.jpg" style="zoom:33%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/31920488.jpg" style="zoom:33%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/31920488.jpg" style="zoom:33%;" />
 
 **一般后面有答案**
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/12701488.jpg" style="zoom:33%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/12701488.jpg" style="zoom:33%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/6670283.jpg" style="zoom:33%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/6670283.jpg" style="zoom:33%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/23749496.jpg" style="zoom:33%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/23749496.jpg" style="zoom:33%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/92797443.jpg" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/92797443.jpg" style="zoom:50%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/11784961.jpg" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/11784961.jpg" style="zoom:50%;" />
 
 ## 阅读
 
@@ -291,13 +291,13 @@ There's no denying that we're living in a world where things are constantly chan
 was coming up/approaching/around the corner
 ```
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/clipboard.png" alt="img" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/clipboard.png" alt="img" style="zoom:50%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/clipboard-1586686314986.png" alt="img" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/clipboard-1586686314986.png" alt="img" style="zoom:50%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/clipboard-1586686323967.png" alt="img" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/clipboard-1586686323967.png" alt="img" style="zoom:50%;" />
 
-<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/clipboard-1586686332455.png" alt="img" style="zoom:50%;" />
+<img src="https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/IELTS/clipboard-1586686332455.png" alt="img" style="zoom:50%;" />
 
 <img src="IELTS/%E6%9B%BF%E6%8D%A2%E8%AF%8D.png" alt="img" style="zoom:50%;" />
 

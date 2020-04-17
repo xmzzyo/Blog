@@ -29,15 +29,15 @@ $$其中||A||_*是nuclear\ norm，保证A是低秩的，||.||_F表示Frobenius�
 
 精确拉格朗日乘子法算法迭代过程如下：
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Robust-PCA-增广拉格朗日乘子法/32801831.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Robust-PCA-增广拉格朗日乘子法/32801831.jpg)
 
 非精确的增广拉格朗日乘子法，也即交替方向法：
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Robust-PCA-增广拉格朗日乘子法/59747184.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Robust-PCA-增广拉格朗日乘子法/59747184.jpg)
 
 几种优化算法对比：(http://perception.csl.illinois.edu/matrix-rank/sample_code.html)
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Robust-PCA-增广拉格朗日乘子法/57586547.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Robust-PCA-增广拉格朗日乘子法/57586547.jpg)
 
 ### 2. 实验
 
@@ -160,9 +160,9 @@ show_img(["bmp_out.npy", "out_low_rank.npy", "out_sparse.npy"], 176, 144)
 
 如下图：
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Robust-PCA-增广拉格朗日乘子法/53180618.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Robust-PCA-增广拉格朗日乘子法/53180618.jpg)
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Robust-PCA-增广拉格朗日乘子法/52819459.jpg)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Robust-PCA-增广拉格朗日乘子法/52819459.jpg)
 
 ### 3. 参考文献：
 

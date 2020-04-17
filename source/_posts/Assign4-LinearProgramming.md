@@ -32,7 +32,7 @@ $s_i和t_i$分别是第i架飞机着陆窗口的起始点和结束点
 
 将课程按Fi 进行排序 , xij 为1就是课程i 安排在教室j，则有: 
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign4-LinearProgramming/20190114111218.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign4-LinearProgramming/20190114111218.png)
 
 对于第一个约束，保证了一门课只安排在一间教室
 第二个约束为：若两门课安排在同一个教室，则它们时间不能冲突。当 $x_{ij} = x_{kj} = 1$时，说明课程i和课程j 被安排在同一间教室，它们课程不能冲突，说明$F_i <= S_k$ 。 若两者不全为1时（全为0或一个为1）,显然满足条件。 
@@ -61,20 +61,20 @@ $r$是加油站离对应town的最远距离
 
 （2）
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign4-LinearProgramming/20190114111250.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign4-LinearProgramming/20190114111250.png)
 
 第一个和第二个约束限制了只能一男一女配对
 第三个约束限制了若i和j有边且k和l有边，那么应该是稳定的边。 
 
 （2）
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign4-LinearProgramming/20190114111302.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign4-LinearProgramming/20190114111302.png)
 
 前两个条件与之前的一致
 第三个条件说明当$p_{ilj}=q_{lik}=1$时，说明男i相比女j来说更喜欢女l，女l相比男k更喜欢男i，因此不该是$x_{ij}、x_{kl}$配对。 
 
 ### 6 Duality 
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign4-LinearProgramming/20190114111311.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign4-LinearProgramming/20190114111311.png)
 
-![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign4-LinearProgramming/20190114111320.png)
+![](https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/Assign4-LinearProgramming/20190114111320.png)
