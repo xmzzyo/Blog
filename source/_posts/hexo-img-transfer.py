@@ -16,7 +16,7 @@ import shutil
 
 __author__ = 'xmz'
 
-folder = './'
+folder = './source/_posts/'
 img_folder = '../../../img/'
 
 
