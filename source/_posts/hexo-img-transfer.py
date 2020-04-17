@@ -19,20 +19,26 @@ __author__ = 'xmz'
 folder = './'
 img_folder = '../../../img/'
 
-md_files = []
-img_files = []
 
-for fpathe, dirs, fs in os.walk(folder):
-    for f in fs:
-        filename = os.path.join(fpathe, f)
-        if filename.endswith("md"):
-            md_files.append(filename)
 
-for fpathe, dirs, fs in os.walk(img_folder):
-    for f in fs:
-        filename = os.path.join(fpathe, f)
-        if filename.endswith("png") or filename.endswith("jpg"):
-            img_files.append(filename)
+
+def get_all_md():
+	md_files = []
+	for fpathe, dirs, fs in os.walk(folder):
+	    for f in fs:
+	        filename = os.path.join(fpathe, f)
+	        if filename.endswith("md"):
+	            md_files.append(filename)
+	return md_files
+
+def get_all_pic():
+	img_files = []	
+	for fpathe, dirs, fs in os.walk(img_folder):
+	    for f in fs:
+	        filename = os.path.join(fpathe, f)
+	        if filename.endswith("png") or filename.endswith("jpg"):
+	            img_files.append(filename)
+	return img_files
 
 
 def copy_img(md_name, imgs):
@@ -49,20 +55,32 @@ def rw_md(fn, content):
         f.writelines(content)
 
 
-for md in md_files:
-    md_n = md.split("/")[-1]
-    md_n = md_n.replace(".md", "")
-    print(md_n)
-    with open(md, 'r', encoding='utf8') as f:
-        lines = f.readlines()
-        img_path = []
-        for i, l in enumerate(lines):
-            if re.match(".*https://raw.githubusercontent.com.*", l):
-                urls = re.findall("https://raw.githubusercontent.com.*\.[a-z]{2}g", l)
-                for url in urls:
-                    img = re.findall("[0-9]+\.[a-z]{2}g", url)[0]
-                    lines[i] = l.replace(url, f"{md_n}/{img}")
-        rw_md(md_n + ".md", lines)
+
         # img_path.append(img[0])
         # print(img_path)
         # copy_img(md_n, img_path)
+
+# https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/
+def convert_jsdeliver_url():
+	js_deliver = "https://cdn.jsdelivr.net/gh/xmzzyo/Blog@master/source/_posts/"
+	md_files = get_all_md()
+	for md in md_files:
+	    md_n = md.split("/")[-1]
+	    md_n = md_n.replace(".md", "")
+	    print(md_n)
+	    with open(md, 'r', encoding='utf8') as f:
+	        lines = f.readlines()
+	        img_path = []
+	        for i, l in enumerate(lines):
+	        	if re.match(".*!\\[\\]\\(.+\\)*", l) or re.match(".*src=\".+", l):
+	        		# print("match")
+	        		urls = re.findall(f"({md_n}/[a-z-0-9]+\\.[jp][np]g)", l)
+	        		for url in urls:
+	        			# print(url)
+	        			l = l.replace(url, f"{js_deliver}{url}")
+	        			# print(f"{js_deliver}{url}")
+	        		lines[i] = l
+	    rw_md(md_n + ".md", lines)
+
+if __name__ == "__main__":
+	convert_jsdeliver_url()
