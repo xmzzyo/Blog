@@ -11,11 +11,11 @@ abstract: This blog is encrypted.
 message: You must enter the password to read.
 ---
 
-![](Assign1-DivideAndConquer/20190113151538.png)
+<img src="Assign1-DivideAndConquer/20190113151538.png" style="zoom:67%;" />
 
 
 
-![](Assign1-DivideAndConquer/20190114110221.png)
+<img src="Assign1-DivideAndConquer/20190114110221.png" style="zoom:67%;" />
 
 ### 1 Divide and Conquer 
 
@@ -43,7 +43,7 @@ $T(n)\ =\ T(\frac{n}{2})+C$，总时间复杂度与QuickSelect一样为$O(n)$。
 
 ### 4 Divide and Conquer 
 
-![](Assign1-DivideAndConquer/20190114110415.png)
+<img src="Assign1-DivideAndConquer/20190114110415.png" style="zoom: 67%;" />
 
 不断四分，最后到3*3的格子，localmin要么是边界最小值，要么是中心点，必有localmin。
 
