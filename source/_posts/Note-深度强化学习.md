@@ -14,6 +14,7 @@ description:
 > Note from:
 >
 > - https://github.com/nndl/nndl.github.io
+> - http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML20.html
 
 ## 概念
 
@@ -87,13 +88,13 @@ $𝒥(𝜃) = 𝔼𝜏∼𝑝_𝜃(𝜏)[𝐺(𝜏)] = 𝔼𝜏∼𝑝_𝜃(𝜏
 
 ### 值函数（状态值函数和状态-动作值函数）
 
-#### 状态值函数：
+#### 状态值函数（V函数）
 
 <img src="../asset/Note-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/image-20200420115023853.png" alt="image-20200420115023853" style="zoom:67%;" />
 
-𝑉𝜋(𝑠) 称为状态值函数（State Value Function），表示**从状态𝑠 开始（到结束）**，执行策略𝜋 得到的期望总回报
+$𝑉^𝜋(𝑠)$ 称为状态值函数（State Value Function），表示**从状态𝑠 开始（到结束）**，执行策略𝜋 得到的期望总回报
 
-$𝑉𝜋(𝑠) = 𝔼𝜏∼𝑝(𝜏)[\sum_{t=0}^{T-1}𝛾^𝑡𝑟_{𝑡+1}|𝜏_{𝑠_0} = 𝑠]$
+$𝑉^𝜋(𝑠) = 𝔼𝜏∼𝑝(𝜏)[\sum_{t=0}^{T-1}𝛾^𝑡𝑟_{𝑡+1}|𝜏_{𝑠_0} = 𝑠]$
 
 **贝尔曼方程（Bellman Equation）**（动态规划），表示当前状态的值函数可以通过下个状态的值函数来计算.
 
@@ -142,6 +143,8 @@ Q函数的贝尔曼方程：
 
 > 基于采样的学习算法也称为模型无关的强化学习（Model-Free Reinforcement Learning）算法.
 
+<img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586684887546.png" alt="img" style="zoom: 33%;" />
+
 #### 方法
 
 Q 函数$𝑄^𝜋(𝑠, 𝑎)$ 为初始状态为𝑠，并执行动作𝑎 后所能得到的期望总回报，可以写为:
@@ -178,9 +181,130 @@ $𝑄^𝜋(𝑠, 𝑎) ≈ \hat{𝑄}^𝜋(𝑠, 𝑎) = \frac{1}{N}\sum_{n=1}^N
 
 ### 时序差分学习方法(TD)
 
+<img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586684896040.png" alt="img" style="zoom: 33%;" />
+
 蒙特卡罗方法一般**需要拿到完整的轨迹**，才能对策略进行评估并更新模型，因此效率也比较低.
 
+时序差分学习（Temporal-Difference Learning）方法是蒙特卡罗方法的一种改进，通过**引入动态规划算法**来提高学习效率. 时序差分学习方法是模拟一段轨迹，每行动一步(或者几步)，就利用贝尔曼方程来评估行动前状态的价值. 当时序差分学习方法中每次更新的动作数为最大步数时，就**等价于蒙特卡罗方法**.
 
+将蒙特卡罗方法中Q 函数$\hat{𝑄}^\pi(s,a) $的估计改为增量计算的方式，假设第𝑁 次试验后值函数$\hat{𝑄}^\pi_𝑁 (𝑠, 𝑎)$ 的平均为:
+
+$\hat{𝑄}^\pi_N (𝑠, 𝑎) =\frac{1}{N}\sum_{n=1}^N𝐺(𝜏^{(𝑛)}_{𝑠_0=𝑠,𝑎_0=𝑎})$
+
+<img src="Note-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/image-20200420162512079.png" alt="image-20200420162512079" style="zoom:67%;" />
+
+.
+值函数$\hat{𝑄}^\pi(s, a)$ 在**第𝑁 试验后的平均**等于**第𝑁 − 1 试验后的平均加上一个增量**. 更一般性地，我们将权重系数$\frac{1}{N}$改为一个比较小的正数$\alpha$.
+
+**Q函数更新：**
+
+<img src="Note-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/image-20200420162942259.png" alt="image-20200420162942259" style="zoom:67%;" />
+
+> 时序差分学习是强化学习的主要学习方法，其关键步骤就是在每次迭代中优化Q 函数来减少现实𝑟 + 𝛾𝑄(𝑠′, 𝑎′) 和预期𝑄(𝑠, 𝑎) 的差距.
+>
+> 时序差分学习方法和蒙特卡罗方法的主要不同为：
+>
+> 1. 蒙特卡罗方法**需要一条完整的路径**才能知道其总回报，也**不依赖马尔可夫性质**，**较大方差**；
+> 2. 而时序差分学习方法只需要一步，其总回报**需要通过马尔可夫性质来进行近似估计**，**小方差，不精确**.
+>
+> <img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586684942302.png" alt="img" style="zoom: 33%;" />
+
+#### SARSA (On-Policy)算法（State Action Reward State Action）
+
+由于Bellman方程：
+
+<img src="Note-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/image-20200420164342490.png" alt="image-20200420164342490" style="zoom:50%;" />
+
+<img src="Note-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/image-20200420164535412.png" alt="image-20200420164535412" style="zoom:67%;" />
+
+更新$\hat{𝑄}^\pi(s, a)$ 只需要知道当前状态𝑠 和动作𝑎、奖励𝑟(𝑠, 𝑎, 𝑠′)、下一步的状态𝑠′ 和动作𝑎′.
+
+<img src="Note-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/image-20200420173329436.png" alt="image-20200420173329436" style="zoom:67%;" />
+
+其采样和优化的策略都是$\pi^\epsilon$，**即$\epsilon-Greedy$方法**，所以为**On-Policy算法**.
+
+#### Q-Learning
+
+<img src="Note-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/image-20200420172149723.png" alt="image-20200420172149723" style="zoom: 80%;" />
+
+相当于让𝑄(𝑠, 𝑎) 直接去估计最优状态值函数$𝑄^*(𝑠, 𝑎)$.
+
+<img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586684951476.png" alt="img" style="zoom: 40%;" />
+
+> 与SARSA 算法不同，Q 学习算法**不通过$\pi^\epsilon$，即$\epsilon-Greedy$来选下一步的动作**𝑎′，而是**直接贪婪选最优的Q** 函数，因此更新后的Q 函数是关于策略𝜋 的，而不是策略$\pi^\epsilon$ 的.
+
+<img src="Note-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/image-20200420173358958.png" alt="image-20200420173358958" style="zoom:67%;" />
+
+### 深度Q网络
+
+为了在连续的状态和动作空间中计算值函数$𝑄^\pi(s, a)$，我们可以用一个函数$𝑄_\phi(s, a)$ 来表示近似计算，称为值函数近似（Value Function Approximation）.
+
+函数$𝑄_\phi(s, a)$通常是一个参数为$\phi$的函数，比如神经网络，输出为一个实数，称为Q 网络（Q-network）.
+
+<img src="Note-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/image-20200420173950783.png" alt="image-20200420173950783" style="zoom: 50%;" />
+
+<img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586684961521.png" alt="img" style="zoom:40%;" />
+
+目标函数：
+
+<img src="Note-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/image-20200420174244197.png" alt="image-20200420174244197" style="zoom:50%;" />
+
+这个目标函数存在**两个问题：**
+
+1. 目标不稳定，参数学习的目标依赖于参数本身；
+2. 样本之间有很强的相关性. 
+
+**深度Q 网络采取两个措施：**
+
+1. 目标网络冻结（Freezing Target Networks），即在一个时间段内固定目标中的参数，来稳定学习目标
+2. 经验回放（Experience Replay），即构建一个经验池（Replay Buffer）来去除数据相关性. 经验池是由智能体最近的经历组成的数据集.
+
+<img src="Note-%E6%B7%B1%E5%BA%A6%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/image-20200420174609380.png" alt="image-20200420174609380" style="zoom:60%;" />
+
+### 深度Q Learning改进
+
+<img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685001097.png" alt="img" style="zoom: 33%;" />
+
+<img src="../asset/../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685013831.png" alt="img" style="zoom: 33%;" />
+
+------
+
+<img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685061254.png" alt="img" style="zoom: 33%;" />
+
+------
+
+<img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685084450.png" alt="img" style="zoom: 33%;" />
+
+------
+
+<img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685095275.png" alt="img" style="zoom: 33%;" />
+
+------
+
+<img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685109834.png" alt="img" style="zoom: 33%;" />
+
+------
+
+<img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685122258.png" alt="img" style="zoom: 33%;" />
+
+<img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685134188.png" alt="img" style="zoom: 33%;" />
+
+------
+
+**Q Learning连续Action Space**
+
+1. <img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685157214.png" alt="img" style="zoom: 33%;" />
+2. Actor-Critic
+
+## 基于策略函数的学习方法（Policy/Actor）
+
+
+
+
+
+
+
+ 
 
 
 

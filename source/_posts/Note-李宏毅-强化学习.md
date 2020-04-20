@@ -51,7 +51,7 @@ description:
 
 <img src="../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685001097.png" alt="img" style="zoom:50%;" />
 
-<img src="../asset/../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685013831.png" alt="img" style="zoom:50%;" /><img src="../asset/../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685013831.png" alt="img" style="zoom:50%;" />
+<img src="../asset/../asset/Note-%E6%9D%8E%E5%AE%8F%E6%AF%85-%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/clipboard-1586685013831.png" alt="img" style="zoom:50%;" />
 
 
 
