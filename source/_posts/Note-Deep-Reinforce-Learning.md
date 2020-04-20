@@ -409,7 +409,9 @@ REINFORCE 算法的一个主要缺点是**不同路径之间的方差很大，�
 
 开始训练时，Actor随机表演，Critic随机打分. 通过不断的学习，Critic的评分越来越准，Actor的动作越来越好.
 
-<img src="../asset/Note-Deep-Reinforce-Learning/image-20200420210331909.png" alt="image-20200420210331909" style="zoom:67%;" />
+<img src="../asset/Note-Deep-Reinforce-Learning/image-20200420210331909.png" alt="image-20200420210331909" style="zoom: 50%;" />![image-20200420212938961](../asset/Note-Deep-Reinforce-Learning/image-20200420212938961.png)
+
+<img src="../asset/Note-Deep-Reinforce-Learning/image-20200420212938961.png" alt="image-20200420212938961" style="zoom:50%;" />
 
 ## 总结
 
