@@ -98,9 +98,9 @@ $H_p(T)=-\frac{1}{W_T}\log p(T)$
 
 1. 分词问题
 
-   <img src="NLP-Chp5-语言模型/79452375.jpg" style="zoom:50%;" />
+   <img src="../asset/NLP-Chp5-语言模型/79452375.jpg" style="zoom:50%;" />
 
-   <img src="NLP-Chp5-语言模型/81460265.jpg" style="zoom:50%;" />
+   <img src="../asset/NLP-Chp5-语言模型/81460265.jpg" style="zoom:50%;" />
 
 2. 分词与词性标注一体化方法
 

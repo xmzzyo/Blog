@@ -84,7 +84,7 @@ description:
 
    - 结构歧义（断句歧义）
 
-     <img src="NLP-Chp1-绪论/20190114112451.png" style="zoom:50%;" />
+     <img src="../asset/NLP-Chp1-绪论/20190114112451.png" style="zoom:50%;" />
 
    - 语义歧义（一词多义）
 

@@ -97,7 +97,7 @@ all_encoder_layers[-4:]后四层hidden state concat 作为 feature（Top layers�
 
    BERT中的Position Embedding为：
 
-   ![](Pre-trained-RecSys/20190130221850.png)
+   ![](../asset/Pre-trained-RecSys/20190130221850.png)
 
    只含有位置信息，应该加入时间间隔信息 [Context-aware Sequential Recommendation](https://arxiv.org/abs/1609.05787)
 

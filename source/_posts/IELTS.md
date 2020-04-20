@@ -17,13 +17,13 @@ description:
 
 more than three words，12、twelve
 
-<img src="IELTS/95245029.jpg" style="zoom:33%;" />
+<img src="../asset/IELTS/95245029.jpg" style="zoom:33%;" />
 
 ### 发音
 
 **连读**
 
-<img src="IELTS/53464601.jpg" style="zoom:33%;" />
+<img src="../asset/IELTS/53464601.jpg" style="zoom:33%;" />
 
 an apple	an hour
 
@@ -39,11 +39,11 @@ black coffee	office staff	good day(前后相连，一样的读一个)
 
 **吞音**
 
-<img src="IELTS/86461317.jpg" style="zoom:33%;" />
+<img src="../asset/IELTS/86461317.jpg" style="zoom:33%;" />
 
 ### 地图题
 
-<img src="IELTS/57491362.jpg" style="zoom:33%;" />
+<img src="../asset/IELTS/57491362.jpg" style="zoom:33%;" />
 
 标明：top	bottom	left	right
 
@@ -51,21 +51,21 @@ black coffee	office staff	good day(前后相连，一样的读一个)
 
 单词（同类词）、句子改写
 
-<img src="IELTS/31026232.jpg" style="zoom:33%;" />
+<img src="../asset/IELTS/31026232.jpg" style="zoom:33%;" />
 
-<img src="IELTS/31920488.jpg" style="zoom:33%;" />
+<img src="../asset/IELTS/31920488.jpg" style="zoom:33%;" />
 
 **一般后面有答案**
 
-<img src="IELTS/12701488.jpg" style="zoom:33%;" />
+<img src="../asset/IELTS/12701488.jpg" style="zoom:33%;" />
 
-<img src="IELTS/6670283.jpg" style="zoom:33%;" />
+<img src="../asset/IELTS/6670283.jpg" style="zoom:33%;" />
 
-<img src="IELTS/23749496.jpg" style="zoom:33%;" />
+<img src="../asset/IELTS/23749496.jpg" style="zoom:33%;" />
 
-<img src="IELTS/92797443.jpg" style="zoom:50%;" />
+<img src="../asset/IELTS/92797443.jpg" style="zoom:50%;" />
 
-<img src="IELTS/11784961.jpg" style="zoom:50%;" />
+<img src="../asset/IELTS/11784961.jpg" style="zoom:50%;" />
 
 ## 阅读
 
@@ -291,19 +291,19 @@ There's no denying that we're living in a world where things are constantly chan
 was coming up/approaching/around the corner
 ```
 
-<img src="IELTS/clipboard.png" alt="img" style="zoom:50%;" />
+<img src="../asset/IELTS/clipboard.png" alt="img" style="zoom:50%;" />
 
-<img src="IELTS/clipboard-1586686314986.png" alt="img" style="zoom:50%;" />
+<img src="../asset/IELTS/clipboard-1586686314986.png" alt="img" style="zoom:50%;" />
 
-<img src="IELTS/clipboard-1586686323967.png" alt="img" style="zoom:50%;" />
+<img src="../asset/IELTS/clipboard-1586686323967.png" alt="img" style="zoom:50%;" />
 
-<img src="IELTS/clipboard-1586686332455.png" alt="img" style="zoom:50%;" />
+<img src="../asset/IELTS/clipboard-1586686332455.png" alt="img" style="zoom:50%;" />
 
-<img src="IELTS/%E6%9B%BF%E6%8D%A2%E8%AF%8D.png" alt="img" style="zoom:50%;" />
+<img src="../asset/IELTS/%E6%9B%BF%E6%8D%A2%E8%AF%8D.png" alt="img" style="zoom:50%;" />
 
-<img src="IELTS/%E5%A4%8D%E6%9D%82%E5%8F%A5%E5%9E%8B.png" alt="img" style="zoom:50%;" />
+<img src="../asset/IELTS/%E5%A4%8D%E6%9D%82%E5%8F%A5%E5%9E%8B.png" alt="img" style="zoom:50%;" />
 
-<img src="IELTS/%E5%B8%B8%E7%94%A8%E6%8B%BF%E5%88%86%E5%8F%A5%E5%9E%8B.png" alt="img" style="zoom:50%;" />
+<img src="../asset/IELTS/%E5%B8%B8%E7%94%A8%E6%8B%BF%E5%88%86%E5%8F%A5%E5%9E%8B.png" alt="img" style="zoom:50%;" />
 
 
 
