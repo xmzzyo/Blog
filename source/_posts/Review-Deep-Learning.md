@@ -242,7 +242,7 @@ Regularization is any modification made to the learning algorithm with an intent
 
 8. Adam
 
-   ![](../asset/Review-Deep-Learning/59169403.jpg)
+   <img src="../asset/Review-Deep-Learning/59169403.jpg" style="zoom: 50%;" />
 
 ***以上方法比较***
 

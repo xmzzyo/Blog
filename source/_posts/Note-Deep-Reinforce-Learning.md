@@ -18,6 +18,8 @@ description:
 
 ## 概念
 
+<img src="../asset/Review-Deep-Learning/88055126.jpg" style="zoom:50%;" />
+
 ### 定义
 
 > 强化学习（Reinforcement Learning，RL），是指一类从**（与环境）交互中不断学习**的问题以及解决这类问题的方法. 强化学习问题可以描述为一个智能体从与环境的交互中不断学习以完成特定目标（比如取得最大奖励
@@ -27,6 +29,8 @@ description:
 
 - 多臂老虎机（Multi-Armed Bandit Problem）
 - 悬崖行走
+
+<img src="../asset/Note-Deep-Reinforce-Learning/image-20200420110155864.png" alt="image-20200420110155864" style="zoom:50%;" />
 
 **两个对象：**
 
@@ -51,8 +55,6 @@ description:
 $$𝑠_0, 𝑎_0, 𝑠_1, 𝑟_1, 𝑎_1, ⋯ , 𝑠_{𝑡−1}, 𝑟_{𝑡−1}, 𝑎_{𝑡−1}, 𝑠_𝑡, 𝑟_𝑡, ⋯ $$
 
 其中$𝑟_𝑡 = 𝑟(𝑠_{𝑡−1}, 𝑎_{𝑡−1}, 𝑠_𝑡) $是第𝑡 时刻的即时奖励
-
-<img src="../asset/Note-Deep-Reinforce-Learning/image-20200420110155864.png" alt="image-20200420110155864" style="zoom:50%;" />
 
 **马尔可夫决策过程**（Markov Decision Process，**MDP**）在**马尔可夫**过程中加入一个额外的变量：动作𝑎，即下一个时刻的**状态$𝑠_{𝑡+1}$ 和当前时刻的状态$𝑠_𝑡$ 以及动作$𝑎_𝑡$ 相关(一阶马尔可夫)**，
 
@@ -416,6 +418,15 @@ REINFORCE 算法的一个主要缺点是**不同路径之间的方差很大，�
 ## 总结
 
 > 一般而言，基于值函数的方法在策略更新时可能会导致值函数的改变比较大，**对收敛性有一定影响**;而基于策略函数的方法在策略更新时更加更平稳些，但因为策略函数的解空间比较大，**难以进行充分的采样**，导致**方差较大**，并**容易收敛到局部最优解**. Actor-Critic算法通过融合两种方法，取长补短，有着更好的收敛性.
+
+### Model-based learning
+
+<img src="../asset/Review-Deep-Learning/16408984.jpg" style="zoom:50%;" />
+
+**Model-Based优缺点：**
+<img src="../asset/Review-Deep-Learning/19484532.jpg" style="zoom: 33%;" />
+
+<img src="../asset/Review-Deep-Learning/43402611.jpg" style="zoom: 25%;" />
 
 ### 确定性策略
 
