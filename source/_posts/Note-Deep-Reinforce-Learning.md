@@ -1,5 +1,5 @@
 ---
-title: Note-Deep-Reinforce-Learning
+title: Note Deep Reinforce Learning
 tags: []
 thumbnail: ''
 mathjax: true
