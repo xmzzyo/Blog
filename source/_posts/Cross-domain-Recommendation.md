@@ -1,6 +1,6 @@
 ---
 title: Cross-domain Recommendation
-tags: [推荐系统]
+tags: [Cross-domain, 推荐系统]
 thumbnail: ''
 mathjax: true
 toc: true

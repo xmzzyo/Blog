@@ -1,11 +1,12 @@
 ---
 title: Note Deep Reinforce Learning
-tags: []
+tags: [强化学习]
 thumbnail: ''
 mathjax: true
 toc: true
 date: 2020-04-19 19:34:53
 categories:
+- RL
 description:
 ---
 
