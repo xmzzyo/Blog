@@ -75,7 +75,7 @@ $p(\tau) = p(s_0)\prod_{t=0}^{T-1}\pi (a_t|s_t)p(s_{t+1}|s_t, a_t).$
 
 ### 目标函数
 
-轨迹\tau 一个回合（Episode）或试验（Trial）所收到的累积奖励：
+轨迹$\tau$ 一个回合（Episode）或试验（Trial）所收到的累积奖励：
 
 $G(\tau) =\sum_{t=0}^{T-1}\gamma(s_t, a_t, s_{t+1})$
 
@@ -95,7 +95,7 @@ $J(\theta) = \mathbb{E}\tau∼p_\theta(\tau)[G(\tau)] = \mathbb{E}\tau∼p_\thet
 
 <img src="../asset/Note-Deep-Reinforce-Learning/image-20200420115023853.png" alt="image-20200420115023853" style="zoom:67%;" />
 
-$V^\pi(s)$ 称为状态值函数（State Value Function），表示**从状态s 开始（到结束）**，执行策略\pi 得到的期望总回报
+$V^\pi(s)$ 称为状态值函数（State Value Function），表示**从状态s 开始（到结束）**，执行策略$\pi$ 得到的期望总回报
 
 $V^\pi(s) = \mathbb{E}\tau∼p(\tau)[\sum_{t=0}^{T-1}\gamma^t\gamma_{t+1}|\tau_{s_0} = s]$
 
@@ -121,7 +121,7 @@ Q函数的贝尔曼方程：
 
 值函数的作用→优化：
 
-> 假设在状态s，有一个动作$a^∗ $使得$Q^\pi(s, a^∗) > V^\pi(s)$，说明执行动作$a^∗ $的回报比当前的策略\pi(a|s) 要高，我们就可以调整参数使得策略中执行动作$a^∗ $的概率$p(a^∗|s)$ 增加.
+> 假设在状态s，有一个动作$a^∗ $使得$Q^\pi(s, a^∗) > V^\pi(s)$，说明执行动作$a^∗ $的回报比当前的策略$\pi(a|s)$ 要高，我们就可以调整参数使得策略中执行动作$a^∗ $的概率$p(a^∗|s)$ 增加.
 
 ### 深度强化学习
 
@@ -303,7 +303,7 @@ $\hat{Q}^\pi_N (s, a) =\frac{1}{N}\sum_{n=1}^NG(\tau^{(n)}_{s_0=s,a_0=a})$
 **Q Learning连续Action Space**
 
 1. <img src="../asset/Note-Deep-Reinforce-Learning/clipboard-1586685157214.png" alt="img" style="zoom: 33%;" />
-2. Actor-Critic
+2. **Actor-Critic**
 
 ## 基于策略函数的学习方法（Policy/Actor）
 
