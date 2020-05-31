@@ -1,7 +1,6 @@
 ---
 title: Deep Reinforcement Learning for Recommender Systems
 tags: [强化学习, 推荐系统]
-password: 1aa45ed061f8f41b7292a435ae009b9e44b9d0dbc7b76cac50490f783956e667
 thumbnail: ''
 mathjax: true
 toc: true
@@ -41,7 +40,7 @@ description:
 > - 广告系统提高CTR
 > - 店铺搜索提高GMV
 >
-> 场景：
+> 不同场景：
 >
 > - Main Search：在搜索框搜索，返回多个domain的various item，是用户的主要行为
 > - In-Shop Search：店铺内搜索

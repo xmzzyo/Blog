@@ -6,9 +6,6 @@ tags:
 categories:
 	- Algorithms
 thumbnail: 0-0.png
-password: 180055
-abstract: This blog is encrypted.
-message: You must enter the password to read.
 ---
 
 <img src="../asset/Assign1-DivideAndConquer/20190113151538.png" style="zoom:67%;" />

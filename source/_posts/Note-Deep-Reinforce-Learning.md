@@ -14,8 +14,8 @@ description:
 
 > Note from:
 > 
-> - https://github.com/nndl/nndl.github.io
-> - http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML20.html
+> - https://github.com/nndl/nndl.github.io 邱锡鹏老师的深度学习书，个人认为是强化学习中文讲解最有条理、最通俗易懂版本
+> - http://speech.ee.ntu.edu.tw/~tlkagk/courses_ML20.html 台湾大学李宏毅老师
 
 ## 概念
 
