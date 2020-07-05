@@ -156,7 +156,7 @@ Optimove：
 - 哪些客户将来会减少支出，哪些营销措施最有效地使他们保持当前的支出水平？
 - 哪些客户有潜力成为大客户，哪些营销活动将最有效地增加每个客户的支出？
 
-![生命周期](https://2pdc263i2r25zygvd3mjx83o-wpengine.netdna-ssl.com/wp-content/uploads/Segmentation_Lifecycle.png)
+<img src="../asset/Life-Time-Value/image-20200704122902848.png" alt="image-20200704122902848" style="zoom:67%;" />
 
 different stages of the customer lifecycle：
 
@@ -240,4 +240,10 @@ DSTN - Interactive Attention Model：针对不同的目标广告，不同类型�
 <img src="../asset/Life-Time-Value/image-20200622123656573.png" alt="image-20200622123656573" style="zoom:50%;" />
 
 
+
+### Modeling Dwell Time Engagement on Visual Multimedia
+
+<img src="../asset/Life-Time-Value/image-20200704123051283.png" alt="image-20200704123051283" style="zoom:67%;" />
+
+<img src="../asset/Life-Time-Value/image-20200704123707595.png" alt="image-20200704123707595" style="zoom:50%;" />
 
