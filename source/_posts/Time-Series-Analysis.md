@@ -224,4 +224,94 @@ global TCN-MF（TCN+矩阵分解） model + local per time-series properties
 
 ### Fully Neural Network based Model for General Temporal Point Processes
 
-泛化表示hazard function（integral of the intensity function）
+神经网络泛化表示hazard function（integral of the intensity function）
+
+### Tensorized LSTM with Adaptive Shared Memory for Learning Trends in Multivariate Time Series
+
+多任务共享，学习trend
+
+<img src="../asset/Time-Series-Analysis/image-20200705185307224.png" alt="image-20200705185307224" style="zoom:67%;" />
+
+<img src="../asset/Time-Series-Analysis/image-20200705185333733.png" alt="image-20200705185333733" style="zoom:67%;" />
+
+<img src="../asset/Time-Series-Analysis/image-20200705185459757.png" alt="image-20200705185459757" style="zoom:50%;" />
+
+### Deep Unsupervised Binary Coding Networks for Multivariate Time Series Retrieval
+
+判断时间序列相似：
+
+1. DTW
+2. 傅里叶变换
+3. 小波分解
+4. Piecewise Aggregate Approximation (PAA)
+5. Locality Sensitive Hashing (LSH)
+6. Sketch, Single, & Hash (SSH)
+7. DeepBit and Hash-
+   GAN, have been employed
+   to learn binary representations
+
+<img src="../asset/Time-Series-Analysis/image-20200705192158509.png" alt="image-20200705192158509" style="zoom:67%;" />
+
+cluster使用KL距离
+
+对抗是因为聚类可能会过拟合
+
+### Time2Graph: Revisiting Time Series Modeling with Dynamic Shapelets
+learn the representations of
+a time series by extracting time-aware shapelets and constructing a shapelet evolution graph
+
+DTW计算segment和shapelets的相似度，K个候选shapelets
+
+<img src="../asset/Time-Series-Analysis/image-20200705200131834.png" alt="image-20200705200131834" style="zoom:67%;" />
+
+### Relation Inference among Sensor Time Series in Smart Buildings with Metric Learning
+
+Similarity Metric Learning for Time Series：
+
+1. DTW
+2. Deep Expected Alignment Distance (DECADE)
+3. Warping Networks (WN)
+4. Hidden Markov Model (HMM)
+5. Markovian Event Model (MEMO)
+6. Siamese network
+
+短时傅里叶变换+Triple net判断相似性
+
+<img src="../asset/Time-Series-Analysis/image-20200705204452068.png" alt="image-20200705204452068" style="zoom:50%;" />
+
+### Block Hankel Tensor ARIMA for Multiple Short Time Series Forecasting
+
+使用多路延迟MDT把time series矩阵转换为a high-order block Hankel tensor，which represents all the TS at each time point as
+a tensor in a high-dimensional embedded space. 
+
+高阶Hankel假设有 low-rank or
+smooth manifold in the embedded space
+
+然后使用low-rank Tucker decomposition分解出core tensor，在core tensor上使用ARIMA
+
+最后inverse Tucker
+decomposition and inverse MDT还原
+
+<img src="../asset/Time-Series-Analysis/image-20200705210826441.png" alt="image-20200705210826441" style="zoom:67%;" />
+
+### Joint Modeling of Local and Global Temporal Dynamics for Multivariate Time Series Forecasting with Missing Values
+
+使用local（统计信息，Last Observation）+Global（local作为key去query，记忆网络）
+
+<img src="../asset/Time-Series-Analysis/image-20200705213240375.png" alt="image-20200705213240375" style="zoom:67%;" />
+
+<img src="../asset/Time-Series-Analysis/image-20200705213257960.png" alt="image-20200705213257960" style="zoom:50%;" />
+
+### TapNet: Multivariate Time Series Classiﬁcation with Attentional Prototypical Network
+
+<img src="../asset/Time-Series-Analysis/image-20200705214904817.png" alt="image-20200705214904817" style="zoom:67%;" />
+
+<img src="../asset/Time-Series-Analysis/image-20200705215912572.png" alt="image-20200705215912572" style="zoom:67%;" />
+
+
+
+### Partial Correlation-based Attention  for Multivariate Time Series Forecasting 
+<img src="../asset/Time-Series-Analysis/image-20200705220722468.png" alt="image-20200705220722468" style="zoom:67%;" />
+
+
+
