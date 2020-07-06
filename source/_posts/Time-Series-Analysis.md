@@ -17,7 +17,7 @@ Extreme Value Loss (EVL)解决长尾分布
 
 <img src="../asset/Time-Series-Analysis/image-20200701154150169.png" alt="image-20200701154150169" style="zoom:50%;" />
 
-<img src="../asset/Time-Series-Analysis/image-20200701154209347.png" alt="image-20200701154209347" style="zoom:67%;" />![image-20200701164610383](../asset/Time-Series-Analysis/image-20200701164610383.png)
+<img src="../asset/Time-Series-Analysis/image-20200701154209347.png" alt="image-20200701154209347" style="zoom:67%;" />
 
 ![image-20200701164610383](../asset/Time-Series-Analysis/image-20200701164610383.png)
 
@@ -47,6 +47,8 @@ STL不灵活，季节性特征shift，不适合长季节周期
 2. convolution：局部特征
 3. pooling：降维
 
+<img src="../asset/Time-Series-Analysis/image-20200706195200924.png" alt="image-20200706195200924" style="zoom:67%;" />
+
 ### TiSSA: A Time Slice Self-Attention Approach for Modeling Sequential User Behaviors
 
 ![image-20200702190217077](../asset/Time-Series-Analysis/image-20200702190217077.png)
@@ -64,6 +66,12 @@ Feature Fusion：
 DL和统计模型混合效果好
 
 2H-7H去预测H长度
+
+可解释性：
+
+1. Trend：多项式拟合
+
+2. Seasonal：傅里叶级数拟合
 
 <img src="../asset/Time-Series-Analysis/image-20200702212350914.png" alt="image-20200702212350914" style="zoom:67%;" />
 
@@ -91,9 +99,9 @@ only concerned about the relative
 length of time intervals **in one user sequence**.
 
 **Clipping the**
-**maximum intervals** also avoids sparse relation encodings and en-
-ables the model to generalize to time intervals not seen during train-
-ing.
+**maximum intervals** also avoids sparse relation encodings and enables the model to generalize to time intervals not seen during training.
+
+<img src="../asset/Time-Series-Analysis/image-20200706201517939.png" alt="image-20200706201517939" style="zoom:50%;" />
 
 ### Multi-horizon time series forecasting with temporal attention learning
 
@@ -164,6 +172,10 @@ Model-Agnostic Meta Learning：
 exploit the **shared structure of the tasks**, to obtain models
 that can perform well on each of the tasks. Speciﬁcally, MAML seeks to train a common model for
 all tasks.
+
+<img src="../asset/Time-Series-Analysis/image-20200706212923342.png" alt="image-20200706212923342" style="zoom:67%;" />
+
+
 
 ### Time-series Generative Adversarial Networks
 
